@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <h1>Soc una empresa</h1>
 
-                    T'has loguejat com una empresa!
+                    En aquesta vista mostrarem els treballadors que busquin feina en la mateixa zona o del mateix sector que la empresa.
 
                 </div>
             </div>

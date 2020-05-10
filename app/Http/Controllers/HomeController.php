@@ -24,12 +24,11 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        //Retornem una vista o una altra dependent del rol de cada usuari
-        if(Auth::user()->hasRole('treballador')){
-            return view('homeTreballador');
+        //Redirigim a una vista o una altra dependent del rol de cada usuari
+        if(Auth::user()->hasRole('Treballador')){
+            return redirect('homeTreballador');
         }
         else
-            return view('homeEmpresa');
-
+            return redirect('homeEmpresa');
     }
 }

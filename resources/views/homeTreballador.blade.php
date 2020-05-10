@@ -4,20 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Home treballador</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    T'has loguejat com un treballador!
-
-                </div>
-            </div>
+        </div>
+        <div class="col-md-8">
+            <h1>HomeTreballador</h1>
+            <a class="btn btn-warning" href="http://localhost:8000/ofertesSectorZona">SectorZona</a>
+            <a class="btn btn-warning" href="http://localhost:8000/ofertesSeguits">Seguits</a>
         </div>
     </div>
 </div>

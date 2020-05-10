@@ -8,80 +8,53 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link rel="stylesheet" href="{{ asset('/css/welcome.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
-    <body>
+    <body><div class="fondo"></div>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Inici</a>
-                    @else
-                        <a href="{{ route('login') }}">Iniciar sessió</a>
+            <div class="content">
+            </div>
+            <div class="container presentacio text-center" style="display:flex; height: 100vh; justify-content: center; align-items: center;">
+                <div class="row">
+                <div class="title m-b-md titol">
+                    InstaJob
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Registra't</a>
-                        @endif
+                </div>
+                <div class="col">
+                    <div class="float-right" >
+                        <!--Posem una imatge amb animació-->
+                        <img id="esquerra" src="/recursos/pieza2.png">
+                        <img id="dreta" src="/recursos/pieza32.png">
+                    </div>
+                </div>
+                    <div class="col-12">
+                        <h4>El lloc on trobaràs el que necessites.</h4>
+                    </div>
+                    <div class="col-12">
+                        <p>Necesites feina? Busques algú per la teva empresa? Registra't o inicia sessió i desobreix el que podem fer per tú.</p>
+                    </div>
+                    @if (Route::has('login'))
+                    @auth
+
+                    @if(Auth::user()->hasRole('Empresa'))
+                    <button class="btn botoMes"><a href="http://localhost:8000/homeEmpresa">Inici</a></button>
+                    @else
+                    <button class="btn botoMes"><a href="http://localhost:8000/homeTreballador">Inici</a></button>
+                    @endif
+
+                    @else
+                    <button class="btn botoMes"><a href="http://localhost:8000/login">Inicia sessió.</a></button>
+
+                    @if (Route::has('register'))
+                    <button class="btn botoMes"><a href="http://localhost:8000/register">Registra't!</a></button>
+                    @endif
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    InstaJob
                 </div>
             </div>
         </div>

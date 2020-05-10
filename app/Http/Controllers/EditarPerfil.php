@@ -29,7 +29,6 @@ class EditarPerfil extends Controller
         return redirect('/perfil');
         }
         else{
-
             return redirect('/editarPerfil');
         }
 

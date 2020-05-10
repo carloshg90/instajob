@@ -56,7 +56,7 @@
                             <div class="col-md-6">
                             <select name="sector" id="sector" class="form-control" required>
                                 <option value="{{ Auth::user()->sector }}">{{ Auth::user()->sector }}</option>
-                                <option value="Hosteleria">Hosteleria</option>
+                                <option value="Hostelería">Hostelería</option>
                                 <option value="Mecànica">Mecànica</option>
                                 <option value="Construcció">Construcció</option>
                                 <option value="Banca">Banca</option>
@@ -72,7 +72,10 @@
                                 <option value="Mati">Mati</option>
                                 <option value="Tarda">Tarda</option>
                                 <option value="Nit">Nit</option>
-                                <option value="Tots">Tots</option>
+                                <option value="Matí i tarda">Matí i tarda</option>
+                                <option value="Tarda i nit">Tarda i nit</option>
+                                <option value="Matí i nit">Matí i nit</option>
+                                <option value="Mati, tarda i nit">Mati,tarda i nit</option>
                             </select>
                             </div>
                         </div>
