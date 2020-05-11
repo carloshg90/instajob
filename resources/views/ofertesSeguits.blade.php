@@ -13,18 +13,10 @@
 
             @else
                 <div>
-                    <h5>{{$oferta->nomEmpresa}}</h5>
+                    <a href="{{ url('/perfilAlie/'.$oferta->idEmpresa) }}"><h3>{{$oferta->nomEmpresa}}</h3></a>
                     <h5>{{$oferta->zona}}</h5>
                     <h5>{{$oferta->horari}}</h5>
                     <h5>{{$oferta->cos}}</h5>
-                <!--Botó per seguir a una empresa-->
-                <form action="{{ action('seguidorController@seguirSeguits', $oferta->idEmpresa) }}" method="POST" style="display:inline">
-                    {{ method_field('PUT') }}
-                    {{ csrf_field() }}
-                    <button type="submit" class="btn btn-success" style="display:inline">
-                    <span class="glyphicon glyphicon-remove"></span>Seguir emprresa
-                    </button>
-                </form>
                 <!--Botó per deixar de seguir a una empresa-->
                 <form action="{{ action('seguidorController@noSeguirSeguits', $oferta->idEmpresa) }}" method="POST" style="display:inline">
                     {{ method_field('DELETE') }}

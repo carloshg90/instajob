@@ -8,6 +8,8 @@
             <hr>
             @foreach ($ofertes as $oferta)
                 <div>
+                    <!--Link per veure el perfil de una empresa-->
+                    <a href="{{ url('/perfilAlie/'.$oferta->idEmpresa) }}"><h3>{{$oferta->nomEmpresa}}</h3></a>
                     <h5>{{$oferta->zona}}</h5>
                     <h5>{{$oferta->horari}}</h5>
                     <h5>{{$oferta->cos}}</h5>

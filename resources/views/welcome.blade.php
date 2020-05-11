@@ -6,15 +6,19 @@
 
         <title>Laravel</title>
 
+
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('/css/welcome.css') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
-        <!-- Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     </head>
-    <body><div class="fondo"></div>
+    <body>
+        <div class="fondo"></div>
         <div class="flex-center position-ref full-height">
             <div class="content">
             </div>
@@ -55,6 +59,31 @@
                     @endauth
                 </div>
             @endif
+                </div>
+            </div>
+        </div>
+        <div class="container-FLUID" id="footer">
+            <div class="row">
+                
+                <div class="col-6">
+                    <h2><ins>Informació de contacte</ins></h2>
+                    <p>C/Santa Llogaia, 30</p>
+                    <p>17000, Figueres, Girona</p>
+                    <p>CATALUNYA</p>
+                    <p><i class="fa fa-phone"></i> +34 972 23 12 45</p>
+                    <p><i class="fa fa-envelope"></i> carlos@email.com</p>
+                </div>
+                <div class="col-6">
+                    <h2><ins>Social Media</ins></h2>
+                    <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+                    <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+                    <a href="https://www.google.com" class="fa fa-google"></a>
+                    <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+                    <a href="https://www.youtube.com" class="fa fa-youtube"></a>
+                    <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+                </div>
+                <div class="col-12">
+                    <p>Web creada per Carlos Javier Hinojosa Garcia</p>
                 </div>
             </div>
         </div>

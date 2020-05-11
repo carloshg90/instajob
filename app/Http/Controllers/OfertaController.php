@@ -74,6 +74,7 @@ class ofertaController extends Controller
         $request->USER()->authorizeRoles('Treballador');
         $ofertes=Oferta::all()->where('zona','=',Auth::user()->zona)->where('sector','=',Auth::user()->sector);
         return view('/ofertesSectorZona', array( 'ofertes' => $ofertes));
+
     }
 
     //Funcio que li mostra a l'usuari les ofertes de les empreses a les que segueix
@@ -86,7 +87,6 @@ class ofertaController extends Controller
         ->where('users.id','=',Auth::user()->id)->get();
         //select ofertas.cos from users LEFT JOIN seguidors on users.id = seguidors.idSeguidor LEFT JOIN ofertas on seguidors.idSeguit = ofertas.idEmpresa WHERE users.id = 5
         return view('/ofertesSeguits',array( 'ofertes1' => $ofertes1));
-
     }
 
 

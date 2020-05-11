@@ -25,6 +25,8 @@ Route::get('/home', 'HomeController@index');
 Route::get('/homeTreballador', 'TreballadorController@show');
 Route::get('/homeEmpresa', 'EmpresaController@show');
 Route::get('/perfil', 'perfil@show');
+//Mostrar el perfil de un altre empresa
+Route::get('/perfilAlie/{id}', 'perfil@showOther');
 Route::get('/editarPerfil', 'editarPerfil@show');
 Route::put('/editarPerfil', 'editarPerfil@editar');
 Route::get('/canviarContrassenya', 'canviarContrassenyaController@show');
@@ -44,4 +46,6 @@ Route::delete('/ofertesSectorZona/{id}', 'seguidorController@noSeguirZona');
 Route::get('/ofertesSeguits', 'ofertaController@mostraOfertesSeguits');
 Route::put('/ofertesSeguits/{id}', 'seguidorController@seguirSeguits');
 Route::delete('/ofertesSeguits/{id}', 'seguidorController@noSeguirSeguits');
+//Ajax
+
 });
