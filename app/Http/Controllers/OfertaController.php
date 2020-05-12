@@ -68,26 +68,40 @@ class ofertaController extends Controller
         return redirect('/ofertesCreades');
     }
 
-    //Funcio que li mostra a l'usuari les ofertes que coincideixen amb el seu sector i zona
+    //Funcio que lretorna la vista
     public function mostraOfertesSector(Request $request){
+        return view('/ofertesSectorZona');
+    }
 
+    //Funcio ajax per mostrar totes les ofertes
+    public function mostraOfertesAjax(Request $request){
         $request->USER()->authorizeRoles('Treballador');
         $ofertes=Oferta::all()->where('zona','=',Auth::user()->zona)->where('sector','=',Auth::user()->sector);
-        return view('/ofertesSectorZona', array( 'ofertes' => $ofertes));
-
+        return response()->json(array('ofertes'=>$ofertes), 200);
     }
 
-    //Funcio que li mostra a l'usuari les ofertes de les empreses a les que segueix
-    public function mostraOfertesSeguits(Request $request){
-
-        $request->USER()->authorizeRoles('Treballador');
-        $ofertes1 = User::select('ofertas.*')
-        ->leftJoin('seguidors','users.id','=','seguidors.idSeguidor')
-        ->leftjoin('ofertas','seguidors.idSeguit','=','ofertas.idEmpresa')
-        ->where('users.id','=',Auth::user()->id)->get();
-        //select ofertas.cos from users LEFT JOIN seguidors on users.id = seguidors.idSeguidor LEFT JOIN ofertas on seguidors.idSeguit = ofertas.idEmpresa WHERE users.id = 5
-        return view('/ofertesSeguits',array( 'ofertes1' => $ofertes1));
+    //Funcio per esborra el seguiment
+    public function esborrarAjax($idEmpresa){
+        $seguidor=Seguidor::where('idSeguidor','=',Auth::user()->id)->where('idSeguit','=', $idEmpresa);
+        $seguidor->delete();
+        return true;
     }
 
+    //Funcio ajax per seguir
+    protected function seguirAjax($id)
+    {
+        $seguidor = new Seguidor();
+        $seguidor->idSeguidor = Auth::user()->id;
+        $seguidor->idSeguit = $id;
+        //Comprovo que aquest seguidor existeix o no
+        $seguidors=Seguidor::where('idSeguidor','=',Auth::user()->id)->where('idSeguit','=',$id)->count();
+
+        if($seguidors == 0){
+            $seguidor->save();
+            return response()->json(['success','Got Simple Ajax Request.']);
+        }else{
+            return response()->json(['success','Got Simple Ajax Request.']);
+        }
+    }
 
 }
