@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
     <div class="col-md-8" id="principal">
-        <h1>Descobreix les empreses que no segueixes i coincideixen amb el teu sectro de treball i la zona en la que busques feina</h1>
+        <h1>Ofertes que coincideixen amb el teu sector i zona.</h1>
         <hr>
     </div>
 </div>
@@ -20,14 +20,20 @@
           success:function(resposta) {
             var ofertes = JSON.parse(JSON.stringify(resposta.ofertes));
              var keys = Object.keys(ofertes);
-             console.log(ofertes);
-              if(keys == 0){
-                console.log("No hay ofertas");
+             console.log(keys.length);
+              if(keys.length == 0){
+                var principal = document.getElementById("principal");
+                var h3 = document.createElement('h3');
+                var text = document.createTextNode("No hi ha ofertes relacionades amb el teu sector i zona.");
+                h3.appendChild(text);
+                principal.appendChild(h3);
               }else{
                 //Generem amb DOM les ofertes
                 for (var i = 0, len = keys.length; i < len; i++) {
-                    console.log(ofertes[keys[i]].id);
                     var principal = document.getElementById("principal");
+                    var div = document.createElement('div');
+                    div.setAttribute("class",ofertes[keys[i]].idEmpresa);
+                    principal.appendChild(div);
                     //Generar nombre de la empresa
                     var a = document.createElement('a');
                     var h3 = document.createElement('h3');
@@ -36,7 +42,7 @@
                     h3.appendChild(linkText);
                     a.setAttribute("href","/perfilAlie/"+ofertes[keys[i]].idEmpresa);
                     a.appendChild(h3);
-                    principal.appendChild(a);
+                    div.appendChild(a);
                     //Informació de la oferta
                     //Zona
                     var h5zona = document.createElement('h5');
@@ -46,7 +52,7 @@
                     h5zona.appendChild(bzona);
                     h5zona.appendChild(zonah5);
                     bzona.appendChild(zonab);
-                    principal.appendChild(h5zona);
+                    div.appendChild(h5zona);
                     //horari
                     var h5horari = document.createElement('h5');
                     var bhorari = document.createElement('b');
@@ -55,7 +61,7 @@
                     h5horari.appendChild(bhorari);
                     h5horari.appendChild(horarih5);
                     bhorari.appendChild(horarib);
-                    principal.appendChild(h5horari);
+                    div.appendChild(h5horari);
                     //sector
                     var h5sector = document.createElement('h5');
                     var bsector = document.createElement('b');
@@ -64,7 +70,7 @@
                     h5sector.appendChild(bsector);
                     h5sector.appendChild(sectorh5);
                     bsector.appendChild(sectorb);
-                    principal.appendChild(h5sector);
+                    div.appendChild(h5sector);
                     //detalls
                     var h5detalls = document.createElement('h5');
                     var bdetalls = document.createElement('b');
@@ -73,22 +79,15 @@
                     h5detalls.appendChild(bdetalls);
                     h5detalls.appendChild(detallsh5);
                     bdetalls.appendChild(detallsb);
-                    principal.appendChild(h5detalls);
+                    div.appendChild(h5detalls);
                     //Generem els botons
-                    //<button onclick="seguir()"></button>
                     var btnSeguir = document.createElement("button");
-                    btnSeguir.setAttribute("class","btn btn-success");
+                    btnSeguir.setAttribute("class","btn btn-success "+ofertes[keys[i]].idEmpresa+" ");
                     btnSeguir.setAttribute("onclick","seguir("+ofertes[keys[i]].idEmpresa+")");
                     btnSeguir.innerHTML = "Seguir empresa";
-                    principal.appendChild(btnSeguir);
-                    //<button onclick="deixarDeSeguir()"></button>
-                    /*var btnSeguir = document.createElement("button");
-                    btnSeguir.setAttribute("class","btn btn-warning");
-                    btnSeguir.setAttribute("onclick","deixarDeSeguir("+ofertes[keys[i]].idEmpresa+")");
-                    btnSeguir.innerHTML = "Deixar de seguir";
-                    principal.appendChild(btnSeguir);*/
+                    div.appendChild(btnSeguir);
                     var hr = document.createElement('hr');
-                    principal.appendChild(hr);
+                    div.appendChild(hr);
                 }
               }
           }
@@ -104,21 +103,8 @@
             "_token": "{{ csrf_token() }}",
           },
           success:function(response){
-            alert("Has seguit a l'empresa amb id: "+$id)
-          },
-         });
-    }
-
-    //Funcio per deixar de seguir a una empresa
-    function deixarDeSeguir($id){
-        $.ajax({
-          url: "/ofertesAjaxDelete/"+$id,
-          type:"DELETE",
-          data:{
-            "_token": "{{ csrf_token() }}",
-          },
-          success:function(response){
-            alert("Has deixat de seguir a l'empresa amb id: "+$id)
+            console.log("Seguit");
+            $("."+$id).attr("disabled", true);
           },
          });
     }

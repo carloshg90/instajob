@@ -19,7 +19,7 @@ class CreateSeguidorsTable extends Migration
             $table->unsignedBigInteger('idSeguidor');
             $table->unsignedBigInteger('idSeguit')->nullable();
             $table->foreign('idSeguidor')->references('id')->on('users')->onUpdate('cascade');
-            $table->foreign('idSeguit')->references('idEmpresa')->on('ofertas')->onUpdate('cascade');
+            $table->foreign('idSeguit')->references('id')->on('users')->onUpdate('cascade');
         });
     }
 

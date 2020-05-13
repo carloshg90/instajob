@@ -39,6 +39,13 @@ class ofertaController extends Controller
             return view('ofertesCreades', array( 'ofertes' => $ofertes));
     }
 
+    public function mevesOfertesAjax(Request $request )
+    {
+            $request->USER()->authorizeRoles('Empresa');
+            $ofertes=Oferta::all()->where('idEmpresa','=',Auth::user()->id);
+            return response()->json(array('ofertes'=>$ofertes), 200);
+    }
+
     //Funcio a la que li passem un id i esborra aquella oferta
     public function borrarOferta($id)
     {
@@ -100,7 +107,7 @@ class ofertaController extends Controller
             $seguidor->save();
             return response()->json(['success','Got Simple Ajax Request.']);
         }else{
-            return response()->json(['success','Got Simple Ajax Request.']);
+            return response()->json(['success','Ja segueixes a aquesta empresa.']);
         }
     }
 

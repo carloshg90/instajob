@@ -33,25 +33,25 @@ Route::get('/canviarContrassenya', 'canviarContrassenyaController@show');
 Route::put('/canviarContrassenya', 'canviarContrassenyaController@editar');
 Route::get('/ofertes', 'ofertaController@show');
 Route::put('/ofertes', 'ofertaController@crear');
-Route::get('/ofertesCreades', 'ofertaController@mevesOfertes');
+
 Route::put('/ofertesCreades/{id}', 'ofertaController@editarOferta');
 Route::delete('/ofertesCreades/{id}', 'ofertaController@borrarOferta');
 Route::get('/editarOferta/{id}', 'ofertaController@showEditar');
 Route::put('/editarOferta/{id}', 'ofertaController@editarOferta');
 
+//Mostrar les meves ofertes
+Route::get('/ofertesCreades', 'ofertaController@mevesOfertes');
+Route::get('/ofertesCreadesAjax', 'ofertaController@mevesOfertesAjax');//Ajax
+
 //Mostrar ofertes de la zona
 //OFERTACONTROLLER pertany a l'apartat de les ofertes per sector i zona
 Route::get('/ofertesAjax', 'ofertaController@mostraOfertesAjax');//Ajax
 Route::post('/ofertesAjaxSeguir/{id}', 'ofertaController@seguirAjax');//Ajax
-Route::delete('/ofertesAjaxDelete/{id}', 'ofertaController@esborrarAjax');//Ajax
 Route::get('/ofertesSectorZona', 'ofertaController@mostraOfertesSector');
 
 //Mostrar ofertes de les empreses que segueixo
 //SEGUIDORCONTROLLER pertany a l'apartat de les ofertes de les empreses que segueixo
-Route::get('/ofertesSeguitsAjax', 'seguidorController@mostraOfertesSeguits');//Ajax
-//Route::put('/ofertesAjaxSeguir/{id}', 'seguidorController@seguirAjax');//Ajax
-//Route::delete('/ofertesAjaxDelete/{id}', 'seguidorController@esborrarAjax');//Ajax
+Route::get('/ofertesSeguitsAjax', 'seguidorController@mostraOfertesSeguitsAjax');//Ajax
+Route::delete('/ofertesAjaxBorrar/{id}', 'seguidorController@esborrarAjax');//Ajax
 Route::get('/ofertesSeguits', 'seguidorController@mostraOfertesSeguits');
-Route::put('/ofertesSeguits/{id}', 'seguidorController@seguirSeguits');
-Route::delete('/ofertesSeguits/{id}', 'seguidorController@noSeguirSeguits');
 });

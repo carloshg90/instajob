@@ -2,10 +2,12 @@
 
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<div class="container">
+<div class="container col-8">
     <div class="row justify-content-center">
-        <div class="col-md-8" id="principal">
-            <h1>Aquestes son les ofertes de les empreses a les que segueixes</h1>
+        <h1>Aquestes son les ofertes de les empreses a les que segueixes</h1>
+        <hr>
+        <div class="col-12" id="principal">
+        <hr>
         </div>
     </div>
 </div>
@@ -20,14 +22,23 @@
           success:function(resposta) {
             var ofertes = JSON.parse(JSON.stringify(resposta.ofertes));
              var keys = Object.keys(ofertes);
-             console.log(ofertes);
-              if(keys == 0){
-                console.log("No hay ofertas");
+             console.log(ofertes[0].id)
+             console.log(keys.length)
+              if(ofertes[0].id == null){
+                console.log("No sigues a nadie");
+                var principal = document.getElementById("principal");
+                var h3 = document.createElement('h3');
+                var text = document.createTextNode("No segueixes a ningu");
+                h3.appendChild(text);
+                principal.appendChild(h3);
               }else{
                 //Generem amb DOM les ofertes
                 for (var i = 0, len = keys.length; i < len; i++) {
-                    console.log(ofertes[keys[i]].id);
                     var principal = document.getElementById("principal");
+                    var div = document.createElement('div');
+                    //Generem un div per cada oferta amb el id de la oferta
+                    div.setAttribute("class",ofertes[keys[i]].idEmpresa);
+                    principal.appendChild(div);
                     //Generar nombre de la empresa
                     var a = document.createElement('a');
                     var h3 = document.createElement('h3');
@@ -36,7 +47,7 @@
                     h3.appendChild(linkText);
                     a.setAttribute("href","/perfilAlie/"+ofertes[keys[i]].idEmpresa);
                     a.appendChild(h3);
-                    principal.appendChild(a);
+                    div.appendChild(a);
                     //Informació de la oferta
                     //Zona
                     var h5zona = document.createElement('h5');
@@ -46,7 +57,7 @@
                     h5zona.appendChild(bzona);
                     h5zona.appendChild(zonah5);
                     bzona.appendChild(zonab);
-                    principal.appendChild(h5zona);
+                    div.appendChild(h5zona);
                     //horari
                     var h5horari = document.createElement('h5');
                     var bhorari = document.createElement('b');
@@ -55,7 +66,7 @@
                     h5horari.appendChild(bhorari);
                     h5horari.appendChild(horarih5);
                     bhorari.appendChild(horarib);
-                    principal.appendChild(h5horari);
+                    div.appendChild(h5horari);
                     //sector
                     var h5sector = document.createElement('h5');
                     var bsector = document.createElement('b');
@@ -64,7 +75,7 @@
                     h5sector.appendChild(bsector);
                     h5sector.appendChild(sectorh5);
                     bsector.appendChild(sectorb);
-                    principal.appendChild(h5sector);
+                    div.appendChild(h5sector);
                     //detalls
                     var h5detalls = document.createElement('h5');
                     var bdetalls = document.createElement('b');
@@ -73,56 +84,32 @@
                     h5detalls.appendChild(bdetalls);
                     h5detalls.appendChild(detallsh5);
                     bdetalls.appendChild(detallsb);
-                    principal.appendChild(h5detalls);
-                    //Generem els botons
-                    //<button onclick="seguir()"></button>
-                    /*var btnSeguir = document.createElement("button");
-                    btnSeguir.setAttribute("class","btn btn-success");
-                    btnSeguir.setAttribute("onclick","seguir("+ofertes[keys[i]].idEmpresa+")");
-                    btnSeguir.innerHTML = "Seguir empresa";
-                    principal.appendChild(btnSeguir);*/
-                    //<button onclick="deixarDeSeguir()"></button>
+                    div.appendChild(h5detalls);
+                    //Generem el boto per deixar de seguir a l'empresa
                     var btnSeguir = document.createElement("button");
                     btnSeguir.setAttribute("class","btn btn-danger");
                     btnSeguir.setAttribute("onclick","deixarDeSeguir("+ofertes[keys[i]].idEmpresa+")");
                     btnSeguir.innerHTML = "Deixar de seguir";
-                    principal.appendChild(btnSeguir);
+                    div.appendChild(btnSeguir);
                     var hr = document.createElement('hr');
-                    principal.appendChild(hr);
+                    div.appendChild(hr);
                 }
               }
           }
        });
     }
 
-    //Funcio per seguir a una empresa
-    function seguir($id){
-
-        $.ajax({
-          url: "/ofertesAjaxDelete/"+$id,
-          type:"DELETE",
-          data:{
-            "_token": "{{ csrf_token() }}",
-          },
-          success:function(response){
-            alert("Has seguita l'empresa amb id: "+$id)
-          },
-         });
-
-
-    }
-
     //Funcio per deixar de seguir a una empresa
     function deixarDeSeguir($id){
 
         $.ajax({
-          url: "/ofertesAjaxDelete/"+$id,
+          url: "/ofertesAjaxBorrar/"+$id,
           type:"DELETE",
           data:{
             "_token": "{{ csrf_token() }}",
           },
           success:function(response){
-            alert("Has deixat de seguir a l'empresa amb id: "+$id)
+            $("."+$id).remove();
           },
          });
     }

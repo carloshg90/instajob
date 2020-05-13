@@ -54,6 +54,60 @@ class UsersSeeder extends Seeder
             'zona' => 'Barcelona'
         ),
         array(
+            'name' => 'Empresa5',
+            'email' => 'empresa5@gmail.com',
+            'password' => 'empresa5',
+            'sector' => 'Hostelería',
+            'horari' => 'Tarda',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'Empresa6',
+            'email' => 'empresa6@gmail.com',
+            'password' => 'empresa6',
+            'sector' => 'Hostelería',
+            'horari' => 'Tarda',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'Empresa7',
+            'email' => 'empresa7@gmail.com',
+            'password' => 'empresa7',
+            'sector' => 'Hostelería',
+            'horari' => 'Tarda',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'Empresa8',
+            'email' => 'empresa8@gmail.com',
+            'password' => 'empresa8',
+            'sector' => 'Hostelería',
+            'horari' => 'Tarda',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'Empresa9',
+            'email' => 'empresa9@gmail.com',
+            'password' => 'empresa9',
+            'sector' => 'Hostelería',
+            'horari' => 'Tarda',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'Empresa10',
+            'email' => 'empresa10@gmail.com',
+            'password' => 'empresa10',
+            'sector' => 'Hostelería',
+            'horari' => 'Tarda',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
             'name' => 'Treballador1',
             'email' => 'treballador1@gmail.com',
             'password' => 'treballador1',

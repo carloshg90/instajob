@@ -17,7 +17,8 @@ class CreateOfertasTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('nomEmpresa');
-            $table->unsignedBigInteger('idEmpresa')->nullable()->index();
+            $table->unsignedBigInteger('idEmpresa');
+            $table->foreign('idEmpresa')->references('id')->on('users')->onUpdate('cascade');
             $table->string('sector');
             $table->string('horari');
             $table->string('zona');
