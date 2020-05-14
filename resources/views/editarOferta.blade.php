@@ -44,14 +44,15 @@
                                 <input id="cos" type="text" class="form-control" name="cos" required>
                             </div>
                         </div>
-
-                        <form action="{{ action('ofertaController@editarOferta', $oferta->id) }}" method="POST" style="display:inline">
+                        <div class="form-group row" style="display:flex;align-items: center;justify-content: center;">
+                        <form action="{{ action('ofertaController@editarOferta', $oferta->id) }}" method="POST" style="display:flex;">
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
-                            <button type="submit" class="btn btn-danger" style="display:inline">
-                            <span class="glyphicon glyphicon-remove"></span>Editar oferta
+                            <button type="submit" class="btn btn-success">
+                            Editar oferta
                             </button>
                         </form>
+                        <div>
                     </form>
                 </div>
             </div>

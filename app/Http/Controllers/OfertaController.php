@@ -31,19 +31,26 @@ class ofertaController extends Controller
         return redirect('/homeEmpresa');
     }
 
-    //Funcio per mostrar les ofertes creades per aquella empresa
+    //Funcio que retorna la vista de les ofertes creades per aquella empresa
     public function mevesOfertes(Request $request )
     {
-            $request->USER()->authorizeRoles('Empresa');
-            $ofertes=Oferta::all()->where('idEmpresa','=',Auth::user()->id);
-            return view('ofertesCreades', array( 'ofertes' => $ofertes));
+            return view('ofertesCreades');
     }
 
+    //Funcio per mostrar les ofertes Ajax
     public function mevesOfertesAjax(Request $request )
     {
             $request->USER()->authorizeRoles('Empresa');
             $ofertes=Oferta::all()->where('idEmpresa','=',Auth::user()->id);
             return response()->json(array('ofertes'=>$ofertes), 200);
+    }
+
+    //Funcio per esborrar oferta Ajax
+    public function deleteOferta($id)
+    {
+        $oferta = Oferta::findOrFail($id);
+        $oferta->delete();
+        return true;
     }
 
     //Funcio a la que li passem un id i esborra aquella oferta
@@ -75,15 +82,26 @@ class ofertaController extends Controller
         return redirect('/ofertesCreades');
     }
 
-    //Funcio que lretorna la vista
-    public function mostraOfertesSector(Request $request){
+    //Funcio que retorna la vista de les ofertes per sector i zona
+    public function mostraOfertesSector(Request $request)
+    {
         return view('/ofertesSectorZona');
     }
 
-    //Funcio ajax per mostrar totes les ofertes
+    //Funcio ajax per mostrar totes les ofertes per sector i zona
     public function mostraOfertesAjax(Request $request){
-        $request->USER()->authorizeRoles('Treballador');
-        $ofertes=Oferta::all()->where('zona','=',Auth::user()->zona)->where('sector','=',Auth::user()->sector);
+
+        $ofertes = DB::table('ofertas')->select('*')->whereNotIn('id',function($query){
+                $query->select('ofertas.id')->from('users')
+                        ->leftJoin('seguidors','users.id','=','seguidors.idSeguidor')
+                        ->leftjoin('ofertas','seguidors.idSeguit','=','ofertas.idEmpresa')
+                        ->where('users.id','=',Auth::user()->id)
+                        ->where('ofertas.zona','=',Auth::user()->zona)
+                        ->where('ofertas.horari','=',Auth::user()->horari);
+        })->get();
+
+        //ofertes oer sector i zona de les empreses que no segueixo
+        //select * from ofertas where id not in (select ofertas.id from users LEFT JOIN seguidors on users.id = seguidors.idSeguidor LEFT JOIN ofertas on seguidors.idSeguit = ofertas.idEmpresa WHERE users.id = 11 and ofertas.zona = "Girona" and ofertas.horari = "Matí" )
         return response()->json(array('ofertes'=>$ofertes), 200);
     }
 

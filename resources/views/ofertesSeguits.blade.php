@@ -2,14 +2,27 @@
 
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<div class="container col-8">
+<div class="container">
     <div class="row justify-content-center">
-        <h1>Aquestes son les ofertes de les empreses a les que segueixes</h1>
+        <!--Div de les ofertes-->
+    <div class="col-md-8" id="principal">
+        <h1><b>Ofertes que ofereixen les empreses a les quals segueixes.</b></h1>
         <hr>
-        <div class="col-12" id="principal">
-        <hr>
+    </div>
+        <!--Div dels botons-->
+    <div class="col-2">
+        <div class="col-11">
+            <a href="http://localhost:8000/ofertesSectorZona" class="btn btn-outline-dark" style="margin-bottom: 1em">
+            Ofertes per sector i zona.
+            </a>
+        </div>
+        <div class="col-11">
+            <a href="http://localhost:8000/ofertesSeguits" class="btn btn-outline-dark" >
+            Ofertes de les mepreses que segueixo.
+            </a>
         </div>
     </div>
+
 </div>
 
 <script>
@@ -22,13 +35,13 @@
           success:function(resposta) {
             var ofertes = JSON.parse(JSON.stringify(resposta.ofertes));
              var keys = Object.keys(ofertes);
-             console.log(ofertes[0].id)
-             console.log(keys.length)
+             console.log(ofertes)
+
               if(ofertes[0].id == null){
                 console.log("No sigues a nadie");
                 var principal = document.getElementById("principal");
                 var h3 = document.createElement('h3');
-                var text = document.createTextNode("No segueixes a ningu");
+                var text = document.createTextNode("Encara no segueixes a cap empresa.");
                 h3.appendChild(text);
                 principal.appendChild(h3);
               }else{

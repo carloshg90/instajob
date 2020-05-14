@@ -42,6 +42,7 @@ Route::put('/editarOferta/{id}', 'ofertaController@editarOferta');
 //Mostrar les meves ofertes
 Route::get('/ofertesCreades', 'ofertaController@mevesOfertes');
 Route::get('/ofertesCreadesAjax', 'ofertaController@mevesOfertesAjax');//Ajax
+Route::delete('/esborrarMevaOferta/{id}', 'ofertaController@deleteOferta');//Ajax
 
 //Mostrar ofertes de la zona
 //OFERTACONTROLLER pertany a l'apartat de les ofertes per sector i zona
@@ -54,4 +55,9 @@ Route::get('/ofertesSectorZona', 'ofertaController@mostraOfertesSector');
 Route::get('/ofertesSeguitsAjax', 'seguidorController@mostraOfertesSeguitsAjax');//Ajax
 Route::delete('/ofertesAjaxBorrar/{id}', 'seguidorController@esborrarAjax');//Ajax
 Route::get('/ofertesSeguits', 'seguidorController@mostraOfertesSeguits');
+
+//Ruta fer el formuari de enviament
+Route::get('/formMail','mailController@index');
+//Ruta per enviar el correu
+Route::post('/send','mailController@send');
 });

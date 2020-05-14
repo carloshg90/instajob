@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Nova oferta</div>
+                <div class="card-header"><h1><b>Nova oferta</b></h1></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -24,7 +24,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group row">
-                            <label for="horari" class="col-md-4 col-form-label text-md-right">{{ __('Horari de treball') }}</label>
+                            <label for="horari" class="col-md-4 col-form-label text-md-right">{{ __('Horari de treball.') }}</label>
                             <div class="col-md-6">
                             <select name="horari" id="horari" class="form-control" required>
                                 <option value="Mati">Mati</option>
@@ -48,13 +48,26 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" id="registrar" class="btn btn-primary">
+                                <button type="submit" id="registrar" class="btn btn-success">
                                     {{ __('Crear oferta') }}
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="col-11">
+                <a href="http://localhost:8000/ofertes" class="btn btn-outline-dark" style="margin-bottom: 1em">
+                Crear una oferta.
+                </a>
+            </div>
+
+            <div class="col-11">
+                <a href="http://localhost:8000/ofertesCreades" class="btn btn-outline-dark">
+                Les meves ofertes.
+                </a>
             </div>
         </div>
     </div>
