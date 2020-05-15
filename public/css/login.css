@@ -1,0 +1,22 @@
+.card {
+    margin-top: 20%;
+}
+
+#fondo {
+    background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/recursos/fondo1.jpg");
+    height: 100%;
+    filter: blur(1px);
+    filter: grayscale(50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+}

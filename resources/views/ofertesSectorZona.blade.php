@@ -6,19 +6,24 @@
     <div class="row justify-content-center">
         <!--Div de les ofertes-->
     <div class="col-md-8" id="principal">
-        <h1><b>Ofertes que coincideixen amb el teu setor i zona de treball.</b></h1>
+        <h1 style="text-align: center"><b>Ofertes que coincideixen amb el teu setor i zona de treball.</b></h1>
         <hr>
     </div>
     <!--Div dels botons-->
     <div class="col-2">
-        <div class="col-11">
+        <div class="col-12">
             <a href="http://localhost:8000/ofertesSectorZona" class="btn btn-outline-dark" style="margin-bottom: 1em">
             Ofertes per sector i zona.
             </a>
         </div>
-        <div class="col-11">
-            <a href="http://localhost:8000/ofertesSeguits" class="btn btn-outline-dark" >
+        <div class="col-12">
+            <a href="http://localhost:8000/ofertesSeguits" class="btn btn-outline-dark" style="margin-bottom: 1em">
             Ofertes de les mepreses que segueixo.
+            </a>
+        </div>
+        <div class="col-12">
+            <a href="http://localhost:8000/correusEnviats" class="btn btn-outline-dark" style="margin-bottom: 1em">
+                Veure els meus correus enviats.
             </a>
         </div>
     </div>
@@ -96,11 +101,19 @@
                     bdetalls.appendChild(detallsb);
                     div.appendChild(h5detalls);
                     //Generem els botons
+                    //SEGUIR
                     var btnSeguir = document.createElement("button");
                     btnSeguir.setAttribute("class","btn btn-success "+ofertes[keys[i]].idEmpresa+" ");
                     btnSeguir.setAttribute("onclick","seguir("+ofertes[keys[i]].idEmpresa+")");
                     btnSeguir.innerHTML = "Seguir empresa";
+                    btnSeguir.style.marginRight = "0.3em";
                     div.appendChild(btnSeguir);
+                    //MISSATGE
+                    var btnContactar = document.createElement("a");
+                    btnContactar.setAttribute("class","btn btn-primary "+ofertes[keys[i]].idEmpresa+" ");
+                    btnContactar.setAttribute("href","formMail/"+ofertes[keys[i]].id);
+                    btnContactar.innerHTML = "Contactar ";
+                    div.appendChild(btnContactar);
                     var hr = document.createElement('hr');
                     div.appendChild(hr);
                 }

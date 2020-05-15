@@ -31,6 +31,6 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->view('email');
+        return $this->view('email')->subject('Tenim un candidat per la teva oferta!')->from('carloslaravel@gmail.com', 'InstaJob');
     }
 }

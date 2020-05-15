@@ -1,10 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('/css/homeEmpresa.css') }}">
 <div class="container">
     <div class="row justify-content-center">
-        <h1 id="empresa">Home empresa.</h1>
+        <div class="row titol justify-content-center"><h1><u>InstaJob</u></h1></div>
+        <div class="row  justify-content-center">
+            <div class="col-6 imatge">
+                <img src="/recursos/edifici1.jpg" alt="Moustiers Sainte Marie">
+            </div>
+            <div class="col-6 venbinguda">
+                <h3>Benvingut al teu espai personal com a empresa!</h3>
+            </div>
+        </div>
         <div class="row  justify-content-center">
             <div class="col-5">
                 <!--Boto per crear una oferta de treball-->

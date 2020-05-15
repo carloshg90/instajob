@@ -1,5 +1,31 @@
-img:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    transition: linear 0.5s;
+.titol {
+    font-family: 'Russo One', sans-serif;
+    margin-bottom: 2em;
+}
+
+.titol>h1 {
+    size: 2em;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.venbinguda {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.imatge {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.imatge>img {
+    width: 90%;
+    height: auto;
+    border: 1px solid black;
 }

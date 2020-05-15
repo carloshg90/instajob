@@ -7,7 +7,7 @@
   <style>
       html, body {
           background-color: #fff;
-          color: #636b6f;
+          color: #000000;
           font-family: 'Nunito', sans-serif;
           font-weight: 200;
           height: 100vh;
@@ -17,11 +17,26 @@
       .title { font-size: 84px; }
   </style>
  </head>
- <body>
-  <br/>
-  <div class="container box" style="width: 970px;">
-    <h1>{{ $data['name'] }} està interesat en una oferta de treball</h1>
-   <h3 align="center">{{ $data['message'] }}</h3>
-  </div>
+ <body><div class="container box">
+
+    <h2>Algú està interesat en la teva oferta de treball!</h2>
+    <h3>
+        Detalls de la teva oferta:
+    </h3>
+       <label>Zona: <b>{{ $data['zonaOferta'] }}</b></label>
+       <br>
+       <label>Horari: <b>{{ $data['horariOferta'] }}</b></label>
+       <br>
+       <label>Sector: <b>{{ $data['sectorOferta'] }}</b></label>
+       <br>
+       <label>Descripció: <b>{{ $data['cosOferta'] }}</b></label>
+       <br>
+       <hr>
+    <h3>
+        Missatge del solicitant:
+    </h3>
+    <h4>{{ $data['message'] }}</h4>
+    <p>Si necessites més informació o vols contactar amb aquest/a candidat/a pots posar en contacte amb ell/ella mitjançant la seva direcció de correu: <b>{{ $data['emailContacte'] }}</b>. Molta sort!</p>
+</div>
  </body>
 </html>

@@ -57,7 +57,13 @@ Route::delete('/ofertesAjaxBorrar/{id}', 'seguidorController@esborrarAjax');//Aj
 Route::get('/ofertesSeguits', 'seguidorController@mostraOfertesSeguits');
 
 //Ruta fer el formuari de enviament
-Route::get('/formMail','mailController@index');
+Route::get('/formMail/{id}','mailController@index');
 //Ruta per enviar el correu
 Route::post('/send','mailController@send');
+
+//Mostrar els missatges que he enviat a les empreses
+//Missatgescontroller
+Route::get('/correusEnviats', 'mailController@show');
+Route::get('/correusEnviatsAjax', 'mailController@rebreCorreus');//Ajax
+Route::delete('/esborrarMissatge/{id}', 'mailController@esborrarMissatge');//Ajax
 });

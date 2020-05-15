@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h1 style="text-align:center;"> </h1>
-    <h3 align="center">Envia el teu correu</h3>
+<div class="container col-6">
+    <h1 align="center"><b>Has decidit contactar amb l'empresa {{$empresa->name}}</b></h1>
     <br/>
     @if (count($errors) > 0)
      <div class="alert alert-danger">
@@ -23,18 +22,42 @@
     @endif
     <form method="post" action="{{url('send')}}">
      {{ csrf_field() }}
-     <div class="form-group">
-      <label>Introdueix el teu nom</label>
-      <input type="text" name="name" class="form-control" value="" />
-     </div>
-     <div class="form-group">
-      <label>Email del receptor</label>
-      <input type="text" name="email" class="form-control" value="" />
-     </div>
-     <div class="form-group">
-      <label>Missatge</label>
+     <h3>
+         <u>Oferta</u>
+     </h3>
+
+        <label>Empresa: <b>{{$empresa->name}}</b></label>
+        <input style="display: none" type="text" name="nameEmpresa" class="form-control" value="{{$empresa->name}}"/><br>
+
+        <label>Zona: <b>{{$oferta->zona}}</b></label>
+        <input style="display: none" type="text" name="zonaOferta" class="form-control" value="{{$oferta->zona}}"/><br>
+
+        <label>Horari: <b>{{$oferta->horari}}</b></label>
+        <input style="display: none" type="text" name="horariOferta" class="form-control" value="{{$oferta->horari}}"/><br>
+
+        <label>Sector: <b>{{$oferta->sector}}</b></label>
+        <input style="display: none" type="text" name="sectorOferta" class="form-control" value="{{$oferta->sector}}"/><br>
+
+        <label>Detalls: <b>{{$oferta->cos}}</b></label>
+        <input style="display: none" type="text" name="cosOferta" class="form-control" value="{{$oferta->cos}}"/><br>
+
+        <hr>
+    <h3>
+        <u>Solicitant</u>
+    </h3>
+
+        <label>Nom: <b>{{Auth::user()->name}}</b></label>
+        <input style="display: none" type="text" name="nameTreballador" class="form-control" value="{{Auth::user()->name}}"/><br>
+
+        <input style="display: none" type="text" name="email" class="form-control" value="carloshg90@hotmail.com"/>
+
+        <label>Email de contacte: <b>{{Auth::user()->email}}</b></label>
+        <input style="display: none" type="text" name="emailContacte" class="form-control" value="{{Auth::user()->email}}"/><br>
+
+    <div class="form-group">
+      <label>Missatge per l'empresa:</label>
       <textarea name="message" class="form-control"></textarea>
-     </div>
+    </div>
      <div class="form-group">
       <input type="submit" name="send" class="btn btn-info" value="Enviar" />
      </div>

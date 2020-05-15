@@ -25,7 +25,6 @@
                 <div class="row">
                 <div class="title m-b-md titol">
                     InstaJob
-
                 </div>
                 <div class="col">
                     <div class="float-right" >
