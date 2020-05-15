@@ -1,0 +1,28 @@
+.card {
+    margin-top: 20%;
+}
+
+.card-body {
+    background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/recursos/puzzleBN.jpg");
+}
+
+.card-header {
+    text-align: center;
+}
+
+html,
+body {
+    background-image: linear-gradient( rgba(255, 255, 255), rgba(126, 126, 126));
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}

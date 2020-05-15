@@ -26,6 +26,11 @@
             Veure els meus correus enviats.
             </a>
         </div>
+        <div class="col-12">
+            <a href="http://localhost:8000/buscarEmpreses" class="btn btn-outline-dark" style="margin-bottom: 1em">
+                Buscar empreses.
+            </a>
+        </div>
     </div>
 
 </div>

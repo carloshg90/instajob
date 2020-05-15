@@ -66,4 +66,8 @@ Route::post('/send','mailController@send');
 Route::get('/correusEnviats', 'mailController@show');
 Route::get('/correusEnviatsAjax', 'mailController@rebreCorreus');//Ajax
 Route::delete('/esborrarMissatge/{id}', 'mailController@esborrarMissatge');//Ajax
+
+//Rutes per els buscadors
+Route::get('/buscarTreballadors','cercadorController@showTreballadors');
+Route::get('/buscarEmpreses','cercadorController@showEmpreses');
 });

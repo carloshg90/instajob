@@ -7,14 +7,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Formulari de registre') }}</div>
-
+                <div class="card-header"><h3>{{ __('Formulari de registre') }}</h3></div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nom') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right"><b>{{ __('Nom') }}</b></label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -28,7 +27,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correu electrònic') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right"><b>{{ __('Correu electrònic') }}</b></label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -42,7 +41,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contrassenya') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right"><b>{{ __('Contrassenya') }}</b></label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -56,7 +55,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirma la contrassenya') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right"><b>{{ __('Confirma la teva contrassenya') }}</b></label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -64,7 +63,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="sector" class="col-md-4 col-form-label text-md-right">{{ __('Sector de treball') }}</label>
+                            <label for="sector" class="col-md-4 col-form-label text-md-right"><b>{{ __('Sector de treball') }}</b></label>
 
                             <div class="col-md-6">
                             <select name="sector" id="sector" class="form-control" required>
@@ -77,7 +76,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="horari" class="col-md-4 col-form-label text-md-right">{{ __('Horari de treball') }}</label>
+                            <label for="horari" class="col-md-4 col-form-label text-md-right"><b>{{ __('Horari de treball') }}</b></label>
                             <div class="col-md-6">
                             <select name="horari" id="horari" class="form-control" required>
                                 <option value="Mati">Mati</option>
@@ -92,7 +91,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="zona" class="col-md-4 col-form-label text-md-right">{{ __('Zona de treball') }}</label>
+                            <label for="zona" class="col-md-4 col-form-label text-md-right"><b>{{ __('Zona de treball') }}</b></label>
 
                             <div class="col-md-6">
                             <select name="zona" id="zona" class="form-control" required>
@@ -101,16 +100,16 @@
                         </div>
 
                         <div class="form-group ">
-                            <label for="Usuari" class="col-md-4 col-form-label text-md-right">{{ __('Tipus d\'usuari') }}</label>
+                            <label for="Usuari" class="col-md-4 col-form-label text-md-right"><b>{{ __('Tipus d\'usuari') }}</b></label>
                             <input type="radio" id="Empresa" name="usuari" value="Empresa" checked>
-                            <label for="Empresa">Empresa</label>
+                            <label for="Empresa"><b>Empresa</b></label>
                             <input type="radio" id="Treballador" name="usuari" value="Treballador">
-                            <label for="Treballador">Treballador</label>
+                            <label for="Treballador"><b>Treballador</b></label>
                         </div>
 
                         <div class="form-group ">
                             <div class=" offset-md-4">
-                                <label><input type="checkbox" id="politica" value="politica"> Accepto la <a href="http://127.0.0.1:8000/politicaPrivacitat">política de privacitat</a>.</label><br>
+                                <label><input type="checkbox" id="politica" value="politica"><b>Accepto la <a href="http://127.0.0.1:8000/politicaPrivacitat">política de privacitat</a>.</b> </label><br>
                                 </div>
                         </div>
 

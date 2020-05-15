@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <!--Div de les ofertes-->
-    <div class="col-md-8" id="principal">
+    <div class="col-8" id="principal">
         <h1 style="text-align: center"><b>Missatges enviats a altres empreses.</b></h1>
         <hr>
     </div>
@@ -24,6 +24,11 @@
         <div class="col-12">
             <a href="http://localhost:8000/correusEnviats" class="btn btn-outline-dark" style="margin-bottom: 1em">
             Veure els meus correus enviats.
+            </a>
+        </div>
+        <div class="col-12">
+            <a href="http://localhost:8000/buscarEmpreses" class="btn btn-outline-dark" style="margin-bottom: 1em">
+                Buscar empreses.
             </a>
         </div>
     </div>
