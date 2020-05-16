@@ -110,14 +110,14 @@
                     var btnSeguir = document.createElement("button");
                     btnSeguir.setAttribute("class","btn btn-success "+ofertes[keys[i]].idEmpresa+" ");
                     btnSeguir.setAttribute("onclick","seguir("+ofertes[keys[i]].idEmpresa+")");
-                    btnSeguir.innerHTML = "Seguir empresa";
+                    btnSeguir.innerHTML = "Seguir a questa empresa!";
                     btnSeguir.style.marginRight = "0.3em";
                     div.appendChild(btnSeguir);
                     //MISSATGE
                     var btnContactar = document.createElement("a");
                     btnContactar.setAttribute("class","btn btn-primary "+ofertes[keys[i]].idEmpresa+" ");
                     btnContactar.setAttribute("href","formMail/"+ofertes[keys[i]].id);
-                    btnContactar.innerHTML = "Contactar ";
+                    btnContactar.innerHTML = "M'interesa aquesta oferta!";
                     div.appendChild(btnContactar);
                     var hr = document.createElement('hr');
                     div.appendChild(hr);

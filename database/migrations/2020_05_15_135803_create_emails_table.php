@@ -18,11 +18,11 @@ class CreateEmailsTable extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('idRemitent');
             $table->string('missatgeEnviat');
-            $table->string('zonaOferta');
-            $table->string('horariOferta');
-            $table->string('sectorOferta');
-            $table->string('cosOferta');
-            $table->string('nameEmpresa');
+            $table->string('zonaOferta')->nullable();
+            $table->string('horariOferta')->nullable();
+            $table->string('sectorOferta')->nullable();
+            $table->string('cosOferta')->nullable();
+            $table->string('nomReceptor');
         });
     }
 

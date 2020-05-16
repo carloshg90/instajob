@@ -112,13 +112,14 @@
                     var btnSeguir = document.createElement("button");
                     btnSeguir.setAttribute("class","btn btn-danger");
                     btnSeguir.setAttribute("onclick","deixarDeSeguir("+ofertes[keys[i]].idEmpresa+")");
-                    btnSeguir.innerHTML = "Deixar de seguir";
+                    btnSeguir.innerHTML = "Deixar de seguir a l'empresa";
                     btnSeguir.style.marginRight = "0.3em";
                     div.appendChild(btnSeguir);
+                    //Generem el boto per contactar amb l'empresa
                     var btnContactar = document.createElement("a");
-                    btnContactar.setAttribute("class","btn btn-primary "+ofertes[keys[i]].idEmpresa+" ");
+                    btnContactar.setAttribute("class","btn btn-success "+ofertes[keys[i]].idEmpresa+" ");
                     btnContactar.setAttribute("href","formMail/"+ofertes[keys[i]].idEmpresa);
-                    btnContactar.innerHTML = "Contactar";
+                    btnContactar.innerHTML = "M'interesa aquesta oferta!";
                     div.appendChild(btnContactar);
                     var hr = document.createElement('hr');
                     div.appendChild(hr);

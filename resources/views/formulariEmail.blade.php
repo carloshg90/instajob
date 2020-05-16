@@ -27,7 +27,7 @@
      </h3>
 
         <label>Empresa: <b>{{$empresa->name}}</b></label>
-        <input style="display: none" type="text" name="nameEmpresa" class="form-control" value="{{$empresa->name}}"/><br>
+        <input style="display: none" type="text" name="nomReceptor" class="form-control" value="{{$empresa->name}}"/><br>
 
         <label>Zona: <b>{{$oferta->zona}}</b></label>
         <input style="display: none" type="text" name="zonaOferta" class="form-control" value="{{$oferta->zona}}"/><br>

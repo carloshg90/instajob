@@ -23,6 +23,11 @@
                 Les meves ofertes.
                 </a>
             </div>
+            <div class="col-12">
+                <a href="http://localhost:8000/correusEnviatsEmpresa" class="btn btn-outline-dark" style="margin-bottom: 1em">
+                    Veure correus enviats.
+                </a>
+            </div>
 
             <div class="col-12">
                 <a href="http://localhost:8000/buscarTreballadors" class="btn btn-outline-dark" style="margin-bottom: 1em">

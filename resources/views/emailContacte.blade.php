@@ -18,24 +18,11 @@
   </style>
  </head>
  <body><div class="container box">
-
-    <h2>Algú està interesat en la teva oferta de treball!</h2>
-    <h3>
-        Detalls de la teva oferta:
+    <h2>Algú vol contactar amb tú des de InstaJob!</h2>
+        Han deixat el següent missatge per tu:
     </h3>
-
-       <label>Zona: <b>{{ $data['zonaOferta'] }}</b></label>
-       <br>
-       <label>Horari: <b>{{ $data['horariOferta'] }}</b></label>
-       <br>
-       <label>Sector: <b>{{ $data['sectorOferta'] }}</b></label>
-       <br>
-       <label>Descripció de la teva oferta: <b>{{ $data['cosOferta'] }}</b></label>
-       <br>
-       <hr>
-    <p>Missatge del solicitant:</p>
     <h4>{{ $data['message'] }}</h4>
-    <p>Si necessites més informació o vols contactar amb aquest/a candidat/a pots posar en contacte amb ell/ella mitjançant la seva direcció de correu: <b>{{ $data['emailContacte'] }}</b>. Molta sort!</p>
+    <p>Pots contestar mitjançant la seva direcció de correu: <b>{{ $data['emailContacte'] }}</b>, o entrant a Instajob.</p>
     <hr>
     <h4>Aquest missatge ha sigut enviat des de una direcció de correu que no admet missatges, entra a la nostra web per més informació.</h4>
 </div>
