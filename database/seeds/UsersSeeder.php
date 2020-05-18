@@ -18,126 +18,153 @@ class UsersSeeder extends Seeder
 
     private $arrayUsers= array(
         array(
-            'name' => 'Empresa1',
-            'email' => 'empresa1@gmail.com',
-            'password' => 'empresa1',
+            'name' => 'Mercadona',
+            'email' => 'mercadona@gmail.com',
+            'password' => 'mercadona',
             'sector' => 'Hostelería',
             'horari' => 'Matí',
             'usuari' => 'Empresa',
             'zona' => 'Girona'
         ),
         array(
-            'name' => 'Empresa2',
-            'email' => 'empresa2@gmail.com',
-            'password' => 'empresa2',
+            'name' => 'Carloshg90',
+            'email' => 'carloshg90@hotmail.com',
+            'password' => 'carloshg90',
+            'sector' => 'Hostelería',
+            'horari' => 'Matí',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'Instajob',
+            'email' => 'instajob@gmail.com',
+            'password' => 'instajob',
             'sector' => 'Banca',
             'horari' => 'Nit',
             'usuari' => 'Empresa',
             'zona' => 'Tarragona'
         ),
         array(
-            'name' => 'Empresa3',
-            'email' => 'empresa3@gmail.com',
-            'password' => 'empresa3',
+            'name' => 'Facebook',
+            'email' => 'facebook@gmail.com',
+            'password' => 'facebook',
             'sector' => 'Mecànica',
             'horari' => 'Tarda',
             'usuari' => 'Empresa',
             'zona' => 'Asturias'
         ),
         array(
-            'name' => 'Empresa4',
-            'email' => 'empresa4@gmail.com',
-            'password' => 'empresa4',
+            'name' => 'Marechiaro',
+            'email' => 'marechiaro@gmail.com',
+            'password' => 'marechiaro',
+            'sector' => 'Hostelería',
+            'horari' => 'Tarda',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'Whatsapp',
+            'email' => 'whatsapp@gmail.com',
+            'password' => 'whatsapp',
+            'sector' => 'Hostelería',
+            'horari' => 'Tarda',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'Caixabank',
+            'email' => 'caixabank@gmail.com',
+            'password' => 'caixabank',
+            'sector' => 'Banca',
+            'horari' => 'Tarda',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'Santander',
+            'email' => 'santander@gmail.com',
+            'password' => 'santander',
+            'sector' => 'Banca',
+            'horari' => 'Tarda',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'litoshg90',
+            'email' => 'litoshg90@gmail.com',
+            'password' => 'litoshg90',
+            'sector' => 'Hostelería',
+            'horari' => 'Matí',
+            'usuari' => 'Treballador',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'Decathlon',
+            'email' => 'decathlon@gmail.com',
+            'password' => 'decathlon',
+            'sector' => 'Hostelería',
+            'horari' => 'Tarda',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'Xavi Sala',
+            'email' => 'xavisala@gmail.com',
+            'password' => 'xavisala',
+            'sector' => 'Banca',
+            'horari' => 'Nit',
+            'usuari' => 'Treballador',
+            'zona' => 'Tarragona'
+        ),
+        array(
+            'name' => 'Instagram',
+            'email' => 'instagram@gmail.com',
+            'password' => 'instagram',
+            'sector' => 'Hostelería',
+            'horari' => 'Tarda',
+            'usuari' => 'Empresa',
+            'zona' => 'Girona'
+        ),
+        array(
+            'name' => 'Albert Ibiza',
+            'email' => 'albertibiza@gmail.com',
+            'password' => 'albertibiza',
+            'sector' => 'Mecànica',
+            'horari' => 'Tarda',
+            'usuari' => 'Treballador',
+            'zona' => 'Asturias'
+        ),
+        array(
+            'name' => 'Cendrassos',
+            'email' => 'cendrassos@gmail.com',
+            'password' => 'cendrassos',
             'sector' => 'Construcció',
             'horari' => 'Tarda',
             'usuari' => 'Empresa',
             'zona' => 'Barcelona'
         ),
         array(
-            'name' => 'Empresa5',
-            'email' => 'empresa5@gmail.com',
-            'password' => 'empresa5',
-            'sector' => 'Hostelería',
-            'horari' => 'Tarda',
-            'usuari' => 'Empresa',
-            'zona' => 'Girona'
-        ),
-        array(
-            'name' => 'Empresa6',
-            'email' => 'empresa6@gmail.com',
-            'password' => 'empresa6',
-            'sector' => 'Hostelería',
-            'horari' => 'Tarda',
-            'usuari' => 'Empresa',
-            'zona' => 'Girona'
-        ),
-        array(
-            'name' => 'Empresa7',
-            'email' => 'empresa7@gmail.com',
-            'password' => 'empresa7',
-            'sector' => 'Hostelería',
-            'horari' => 'Tarda',
-            'usuari' => 'Empresa',
-            'zona' => 'Girona'
-        ),
-        array(
-            'name' => 'Empresa8',
-            'email' => 'empresa8@gmail.com',
-            'password' => 'empresa8',
-            'sector' => 'Hostelería',
-            'horari' => 'Tarda',
-            'usuari' => 'Empresa',
-            'zona' => 'Girona'
-        ),
-        array(
-            'name' => 'Empresa9',
-            'email' => 'empresa9@gmail.com',
-            'password' => 'empresa9',
-            'sector' => 'Hostelería',
-            'horari' => 'Tarda',
-            'usuari' => 'Empresa',
-            'zona' => 'Girona'
-        ),
-        array(
-            'name' => 'Empresa10',
-            'email' => 'empresa10@gmail.com',
-            'password' => 'empresa10',
-            'sector' => 'Hostelería',
-            'horari' => 'Tarda',
-            'usuari' => 'Empresa',
-            'zona' => 'Girona'
-        ),
-        array(
-            'name' => 'Treballador1',
-            'email' => 'treballador1@gmail.com',
-            'password' => 'treballador1',
-            'sector' => 'Hostelería',
-            'horari' => 'Matí',
-            'usuari' => 'Treballador',
-            'zona' => 'Girona'
-        ),
-        array(
-            'name' => 'Treballador2',
-            'email' => 'treballador2@gmail.com',
-            'password' => 'treballador2',
-            'sector' => 'Banca',
-            'horari' => 'Nit',
-            'usuari' => 'Treballador',
-            'zona' => 'Tarragona'
-        ),
-        array(
-            'name' => 'Treballador3',
-            'email' => 'treballador3@gmail.com',
-            'password' => 'treballador3',
-            'sector' => 'Mecànica',
+            'name' => 'David Valles',
+            'email' => 'davidvalles@gmail.com',
+            'password' => 'davidvalles',
+            'sector' => 'Construcció',
             'horari' => 'Tarda',
             'usuari' => 'Treballador',
-            'zona' => 'Asturias'
+            'zona' => 'Barcelona'
         ),
         array(
-            'name' => 'Treballador4',
-            'email' => 'treballador4@gmail.com',
-            'password' => 'treballador4',
+            'name' => 'Xavi Vallejo',
+            'email' => 'xavivallejo@gmail.com',
+            'password' => 'xavivallejo',
+            'sector' => 'Construcció',
+            'horari' => 'Tarda',
+            'usuari' => 'Treballador',
+            'zona' => 'Barcelona'
+        ),
+        array(
+            'name' => 'Josep Maria',
+            'email' => 'josepmaria@gmail.com',
+            'password' => 'josepmaria',
             'sector' => 'Construcció',
             'horari' => 'Tarda',
             'usuari' => 'Treballador',

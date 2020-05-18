@@ -91,17 +91,69 @@ class ofertaController extends Controller
     //Funcio ajax per mostrar totes les ofertes per sector i zona
     public function mostraOfertesAjax(Request $request){
 
-        $ofertes = DB::table('ofertas')->select('*')->whereNotIn('id',function($query){
+        //ofertes per sector i zona de les empreses que NO segueixo (LARAVEL ELOQUENT)
+        /*$ofertes = DB::table('ofertas')->select('*')->whereNotIn('id',function($query){
+            $query->select(DB::raw('(select ofertas.id from users LEFT JOIN seguidors on users.id = seguidors.idSeguidor LEFT JOIN ofertas on seguidors.idSeguit = ofertas.idEmpresa WHERE users.id ='.Auth::user()->id.')'));
+            $query->select(DB::raw('ifnull((select ofertas.id from users LEFT JOIN seguidors on users.id = seguidors.idSeguidor LEFT JOIN ofertas on seguidors.idSeguit = ofertas.idEmpresa WHERE users.id ='.Auth::user()->id.'),0)'));
+        })
+        ->where('ofertas.zona','=',Auth::user()->zona)
+        ->where('ofertas.sector','=',Auth::user()->sector)->get();*/
+
+        //SI ESTO RETORNA NULL ES QUE NO SIGO A NADIE, POR LO TANTO DEVOLVEMOS TODAS LAS OFERTAS POR SECTOR I ZONA
+        //select ofertas.* from users LEFT JOIN seguidors on users.id = seguidors.idSeguidor LEFT JOIN ofertas on seguidors.idSeguit = ofertas.idEmpresa WHERE users.id =9
+        $ofertes = User::select('ofertas.*')
+        ->leftJoin('seguidors','users.id','=','seguidors.idSeguidor')
+        ->leftjoin('ofertas','seguidors.idSeguit','=','ofertas.idEmpresa')
+        ->where('users.id','=',Auth::user()->id)->get();
+
+        if(sizeof($ofertes)>=1)//Segueixo a algú
+        {
+            $ofertes = DB::table('ofertas')->select('*')->whereNotIn('id',function($query){
                 $query->select('ofertas.id')->from('users')
                         ->leftJoin('seguidors','users.id','=','seguidors.idSeguidor')
                         ->leftjoin('ofertas','seguidors.idSeguit','=','ofertas.idEmpresa')
-                        ->where('users.id','=',Auth::user()->id)
-                        ->where('ofertas.zona','=',Auth::user()->zona)
-                        ->where('ofertas.horari','=',Auth::user()->horari);
-        })->get();
+                        ->where('users.id','=',Auth::user()->id);
+                    })
+            ->where('ofertas.zona','=',Auth::user()->zona)
+            ->where('ofertas.sector','=',Auth::user()->sector)->get();
 
-        //ofertes oer sector i zona de les empreses que no segueixo
-        //select * from ofertas where id not in (select ofertas.id from users LEFT JOIN seguidors on users.id = seguidors.idSeguidor LEFT JOIN ofertas on seguidors.idSeguit = ofertas.idEmpresa WHERE users.id = 11 and ofertas.zona = "Girona" and ofertas.horari = "Matí" )
+            $fitxer = fopen("C:/basura/basura.log","a+");
+            fwrite($fitxer,print_r("HE ENTRADO EN EL ELSE",true)."\n");
+            fwrite($fitxer,print_r(sizeof($ofertes),true)."\n");
+            fclose($fitxer);
+        }
+        else//No segueixo a ningú
+        {
+            $fitxer = fopen("C:/basura/basura.log","a+");
+            fwrite($fitxer,print_r("HE ENTRADO EN EL ELSE",true)."\n");
+            $ofertes = DB::table('ofertas')->select('*')
+            ->where('ofertas.zona','=',Auth::user()->zona)
+            ->where('ofertas.sector','=',Auth::user()->sector)->get();
+            fwrite($fitxer,print_r(sizeof($ofertes),true)."\n");
+            fclose($fitxer);
+        }
+         /**
+         * Obtenim les ofertes de les empreses que no segueixo
+         */
+
+		//ofertes per sector i zona de les empreses que NO segueixo (LARAVEL ELOQUENT)
+        /*$ofertes = DB::table('ofertas')->select('*')->whereNotIn('id',function($query){
+            //$query->select(DB::raw('ifnull((select ofertas.id from users LEFT JOIN seguidors on users.id = seguidors.idSeguidor LEFT JOIN ofertas on seguidors.idSeguit = ofertas.idEmpresa WHERE users.id ='.Auth::user()->id.'),0)'));
+        })
+        ->where('ofertas.zona','=',Auth::user()->zona)
+        ->where('ofertas.sector','=',Auth::user()->sector)->get();*/
+
+        //LOG
+        /*$fitxer = fopen("C:/basura/basura.log","a+");
+        fwrite($fitxer,print_r(variable o text a escriure,true)."\n");
+        fclose($fitxer);*/
+
+        //ofertes per sector i zona de les empreses que NO segueixo (SQL)
+        //select * from ofertas where id not in
+        //(ifnull((select ofertas.id from users LEFT JOIN seguidors on users.id = seguidors.idSeguidor
+        //LEFT JOIN ofertas on seguidors.idSeguit = ofertas.idEmpresa WHERE users.id = 9),0))
+        //and ofertas.zona = "Girona" and ofertas.sector = "Hostelería"
+
         return response()->json(array('ofertes'=>$ofertes), 200);
     }
 

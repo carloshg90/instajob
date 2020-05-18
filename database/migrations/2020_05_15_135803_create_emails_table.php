@@ -23,6 +23,7 @@ class CreateEmailsTable extends Migration
             $table->string('sectorOferta')->nullable();
             $table->string('cosOferta')->nullable();
             $table->string('nomReceptor');
+            $table->foreign('idRemitent')->references('id')->on('users')->onUpdate('cascade');
         });
     }
 

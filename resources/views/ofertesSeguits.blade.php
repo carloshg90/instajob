@@ -5,10 +5,10 @@
 <div class="container">
     <div class="row justify-content-center">
         <!--Div de les ofertes-->
-    <div class="col-md-8" id="principal">
-        <h1 style="text-align: center"><b>Ofertes que ofereixen les empreses a les quals segueixes.</b></h1>
-        <hr>
-    </div>
+        <div class="col-8" id="principal">
+            <h1 style="text-align: center"><b>Ofertes que ofereixen les empreses a les quals segueixes.</b></h1>
+            <hr>
+        </div>
         <!--Div dels botons-->
     <div class="col-2">
         <div class="col-12">

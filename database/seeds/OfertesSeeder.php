@@ -13,102 +13,102 @@ class OfertesSeeder extends Seeder
     {
         DB::table('ofertas')->insert([
             'id' => 1,
-            'nomEmpresa' => 'Empresa1',
+            'nomEmpresa' => 'Mercadona',
             'idEmpresa' => 1,
             'sector' => 'Hostelería',
             'horari' => 'Matí',
             'zona' => 'Girona',
-            'cos' => 'Oferta de empresa1 de Mati a Girona sector Hostelería',
+            'cos' => 'Busquem un reponedor per aquest cap de setmana',
           ]);
           DB::table('ofertas')->insert([
             'id' => 2,
-            'nomEmpresa' => 'Empresa2',
+            'nomEmpresa' => 'Carloshg90',
             'idEmpresa' => 2,
-            'sector' => 'Banca',
-            'horari' => 'Nit',
-            'zona' => 'Tarragona',
-            'cos' => 'Oferta de empresa2 de Nit a Tarragona sector Banca',
+            'sector' => 'Hostelería',
+            'horari' => 'Matí',
+            'zona' => 'Girona',
+            'cos' => 'Busquem una persona per fer 4 hores diumenge.',
           ]);
           DB::table('ofertas')->insert([
             'id' => 3,
-            'nomEmpresa' => 'Empresa3',
+            'nomEmpresa' => 'Facebook',
             'idEmpresa' => 3,
             'sector' => 'Mecànica',
             'horari' => 'Tarda',
             'zona' => 'Asturias',
-            'cos' => 'Oferta de empresa3 de Tarda a Asturias sector Mecànica',
+            'cos' => 'Necessitem personal per la campanya d\'estiu.',
           ]);
           DB::table('ofertas')->insert([
             'id' => 4,
-            'nomEmpresa' => 'Empresa4',
+            'nomEmpresa' => 'Marechiaro',
             'idEmpresa' => 4,
             'sector' => 'Construcció',
             'horari' => 'Tarda',
             'zona' => 'Barcelona',
-            'cos' => 'Oferta de empresa4 de Tarda a Barcelona sector Construcció',
+            'cos' => 'Busquem repartidor a domicili.',
           ]);
           DB::table('ofertas')->insert([
             'id' => 5,
-            'nomEmpresa' => 'Empresa5',
+            'nomEmpresa' => 'Whatsapp',
             'idEmpresa' => 5,
             'sector' => 'Hostelería',
             'horari' => 'Matí',
             'zona' => 'Girona',
-            'cos' => 'Oferta de empresa5 de Mati a Girona sector Hostelería',
+            'cos' => 'Necessitem BetaTester amb experiencia.',
           ]);
           DB::table('ofertas')->insert([
             'id' => 6,
-            'nomEmpresa' => 'Empresa6',
+            'nomEmpresa' => 'CaixaBank',
             'idEmpresa' => 6,
-            'sector' => 'Hostelería',
+            'sector' => 'Banca',
             'horari' => 'Matí',
             'zona' => 'Girona',
-            'cos' => 'Oferta de empresa6 de Mati a Girona sector Hostelería',
+            'cos' => 'Busquem personal d\'atenció al public',
           ]);
           DB::table('ofertas')->insert([
             'id' => 7,
-            'nomEmpresa' => 'Empresa7',
+            'nomEmpresa' => 'Santander',
+            'idEmpresa' => 7,
+            'sector' => 'Banca',
+            'horari' => 'Matí',
+            'zona' => 'Girona',
+            'cos' => 'Busquem algú que conti els calers que tenim.',
+          ]);
+          DB::table('ofertas')->insert([
+            'id' => 8,
+            'nomEmpresa' => 'Santander',
+            'idEmpresa' => 7,
+            'sector' => 'Banca',
+            'horari' => 'Matí',
+            'zona' => 'Girona',
+            'cos' => 'Necessitem personal de seguretat en el nostre banc.',
+          ]);
+          DB::table('ofertas')->insert([
+            'id' => 9,
+            'nomEmpresa' => 'Mercadona',
+            'idEmpresa' => 1,
+            'sector' => 'Hostelería',
+            'horari' => 'Matí',
+            'zona' => 'Girona',
+            'cos' => 'Necessitem personal de nit per fer inventari.',
+          ]);
+          DB::table('ofertas')->insert([
+            'id' => 10,
+            'nomEmpresa' => 'Santander',
             'idEmpresa' => 7,
             'sector' => 'Hostelería',
             'horari' => 'Matí',
             'zona' => 'Girona',
-            'cos' => 'Oferta de empresa7 de Mati a Girona sector Hostelería',
-          ]);
-          DB::table('ofertas')->insert([
-            'id' => 8,
-            'nomEmpresa' => 'Empresa8',
-            'idEmpresa' => 8,
-            'sector' => 'Hostelería',
-            'horari' => 'Matí',
-            'zona' => 'Girona',
-            'cos' => 'Oferta de empresa8 de Mati a Girona sector Hostelería',
-          ]);
-          DB::table('ofertas')->insert([
-            'id' => 9,
-            'nomEmpresa' => 'Empresa9',
-            'idEmpresa' => 9,
-            'sector' => 'Hostelería',
-            'horari' => 'Matí',
-            'zona' => 'Girona',
-            'cos' => 'Oferta de empresa9 de Mati a Girona sector Hostelería',
-          ]);
-          DB::table('ofertas')->insert([
-            'id' => 10,
-            'nomEmpresa' => 'Empresa10',
-            'idEmpresa' => 10,
-            'sector' => 'Hostelería',
-            'horari' => 'Matí',
-            'zona' => 'Girona',
-            'cos' => 'Oferta de empresa10 de Mati a Girona sector Hostelería',
+            'cos' => 'Es busca personal per Setmana Santa.',
           ]);
           DB::table('ofertas')->insert([
             'id' => 11,
-            'nomEmpresa' => 'Empresa10',
-            'idEmpresa' => 10,
+            'nomEmpresa' => 'Marechiaro',
+            'idEmpresa' => 4,
             'sector' => 'Hostelería',
             'horari' => 'Matí',
             'zona' => 'Girona',
-            'cos' => 'Oferta2 de empresa10 de Mati a Girona sector Hostelería',
+            'cos' => 'Necessitem gent jove per aprendre a fer pizzes aquest estiu.',
           ]);
     }
 }

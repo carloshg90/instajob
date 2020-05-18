@@ -49,7 +49,7 @@
         <label>Nom: <b>{{Auth::user()->name}}</b></label>
         <input style="display: none" type="text" name="nameTreballador" class="form-control" value="{{Auth::user()->name}}"/><br>
 
-        <input style="display: none" type="text" name="email" class="form-control" value="carloshg90@hotmail.com"/>
+        <input style="display: none" type="text" name="email" class="form-control" value="{{$empresa->email}}"/>
 
         <label>Email de contacte: <b>{{Auth::user()->email}}</b></label>
         <input style="display: none" type="text" name="emailContacte" class="form-control" value="{{Auth::user()->email}}"/><br>

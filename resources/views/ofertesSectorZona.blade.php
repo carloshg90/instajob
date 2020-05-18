@@ -5,12 +5,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <!--Div de les ofertes-->
-    <div class="col-md-8" id="principal">
-        <h1 style="text-align: center"><b>Ofertes que coincideixen amb el teu setor i zona de treball.</b></h1>
-        <hr>
-    </div>
-    <!--Div dels botons-->
-    <div class="col-2">
+        <div class="col-md-8" id="principal">
+            <h1 style="text-align: center"><b>Ofertes que coincideixen amb el teu setor i zona de treball.</b></h1>
+            <hr>
+        </div>
+        <!--Div dels botons-->
+        <div class="col-2">
         <div class="col-12">
             <a href="http://localhost:8000/ofertesSectorZona" class="btn btn-outline-dark" style="margin-bottom: 1em">
             Ofertes per sector i zona.
@@ -23,7 +23,7 @@
         </div>
         <div class="col-12">
             <a href="http://localhost:8000/correusEnviats" class="btn btn-outline-dark" style="margin-bottom: 1em">
-                Veure els meus correus enviats.
+            Veure els meus correus enviats.
             </a>
         </div>
         <div class="col-12">
