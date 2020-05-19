@@ -109,7 +109,7 @@
 
                         <div class="form-group ">
                             <div class=" offset-md-4">
-                                <label><input type="checkbox" id="politica" value="politica"><b>Accepto la <a href="http://127.0.0.1:8000/politicaPrivacitat">política de privacitat</a>.</b> </label><br>
+                                <label><input type="checkbox" id="politica" value="politica"><b>Accepto la <a href="{{ url('/politicaPrivacitat') }}">política de privacitat</a>.</b> </label><br>
                                 </div>
                         </div>
 

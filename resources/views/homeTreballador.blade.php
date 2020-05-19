@@ -16,19 +16,19 @@
         </div>
         <div class="row opcions justify-content-center col-12">
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="http://localhost:8000/ofertesSectorZona" class="btn btn-dark">Descobrir ofertes relacionades amb el meu sector i zona de treball.
+                <a href="{{ url('/ofertesSectorZona') }}" class="btn btn-dark">Descobrir ofertes relacionades amb el meu sector i zona de treball.
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="http://localhost:8000/ofertesSeguits" class="btn  btn-dark">Veure les ofertes de les empreses a les que segueixo.
+                <a href="{{ url('/ofertesSeguits') }}" class="btn  btn-dark">Veure les ofertes de les empreses a les que segueixo.
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="http://localhost:8000/correusEnviats" class="btn  btn-dark">Veure l'historial de missatges enviats.
+                <a href="{{ url('/correusEnviats') }}" class="btn  btn-dark">Veure l'historial de missatges enviats.
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="http://localhost:8000/buscarEmpreses" class="btn  btn-dark">Buscar empreses.
+                <a href="{{ url('/buscarEmpreses') }}" class="btn  btn-dark">Buscar empreses.
                 </a>
             </div>
         </div>

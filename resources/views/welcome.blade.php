@@ -43,16 +43,16 @@
                     @auth
 
                     @if(Auth::user()->hasRole('Empresa'))
-                    <button class="btn botoMes"><a href="http://localhost:8000/homeEmpresa">Inici</a></button>
+                    <button class="btn botoMes"><a href="{{ url('/homeEmpresa') }}">Inici</a></button>
                     @else
-                    <button class="btn botoMes"><a href="http://localhost:8000/homeTreballador">Inici</a></button>
+                    <button class="btn botoMes"><a href="{{ url('/homeTreballador') }}">Inici</a></button>
                     @endif
 
                     @else
-                    <button class="btn botoMes"><a href="http://localhost:8000/login">Inicia sessió.</a></button>
+                    <button class="btn botoMes"><a href="{{ url('/login') }}">Inicia sessió.</a></button>
 
                     @if (Route::has('register'))
-                    <button class="btn botoMes"><a href="http://localhost:8000/register">Registra't!</a></button>
+                    <button class="btn botoMes"><a href="{{ url('/register') }}">Registra't!</a></button>
                     @endif
                     @endauth
                 </div>

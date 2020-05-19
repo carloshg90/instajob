@@ -16,19 +16,19 @@
         </div>
         <div class="row opcions justify-content-center col-12">
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="http://localhost:8000/ofertes" class="btn  btn-dark">Crear una nova oferta.
+                <a href="{{ url('/ofertes') }}" class="btn  btn-dark">Crear una nova oferta.
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="http://localhost:8000/ofertesCreades" class="btn btn-dark">Gestionar les meves ofertes.
+                <a href="{{ url('/ofertesCreades') }}" class="btn btn-dark">Gestionar les meves ofertes.
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="http://localhost:8000/correusEnviatsEmpresa" class="btn  btn-dark">Veure l'historial de missatges enviats.
+                <a href="{{ url('/correusEnviatsEmpresa') }}" class="btn  btn-dark">Veure l'historial de missatges enviats.
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="http://localhost:8000/buscarTreballadors" class="btn  btn-dark">Buscar empleats potencials.
+                <a href="{{ url('/buscarTreballadors') }}" class="btn  btn-dark">Buscar empleats potencials.
                 </a>
             </div>
         </div>
