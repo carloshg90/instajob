@@ -106,7 +106,11 @@ class ofertaController extends Controller
         ->leftjoin('ofertas','seguidors.idSeguit','=','ofertas.idEmpresa')
         ->where('users.id','=',Auth::user()->id)->get();
 
-        if(sizeof($ofertes)>=1)//Segueixo a algú
+        if(!isset($ofertes))//No segueixo a algú
+        {
+            $ofertes = Oferta::all()->where('zona','=',Auth::user()->zona)->where('sector','=',Auth::user()->sector);
+        }
+        else//Si segueixo a ningú
         {
             $ofertes = DB::table('ofertas')->select('*')->whereNotIn('id',function($query){
                 $query->select('ofertas.id')->from('users')
@@ -116,13 +120,6 @@ class ofertaController extends Controller
                     })
             ->where('ofertas.zona','=',Auth::user()->zona)
             ->where('ofertas.sector','=',Auth::user()->sector)->get();
-        }
-        else//No segueixo a ningú
-        {
-            $ofertes = DB::table('ofertas')->select('*')
-            ->where('ofertas.zona','=',Auth::user()->zona)
-            ->where('ofertas.sector','=',Auth::user()->sector)->get();
-
         }
          /**
          * Obtenim les ofertes de les empreses que no segueixo
@@ -137,7 +134,7 @@ class ofertaController extends Controller
 
         //LOG
         /*$fitxer = fopen("C:/basura/basura.log","a+");
-        fwrite($fitxer,print_r(variable o text a escriure,true)."\n");
+        fwrite($fitxer,print_r("variable o text a escriure",true)."\n");
         fclose($fitxer);*/
 
         //ofertes per sector i zona de les empreses que NO segueixo (SQL)
