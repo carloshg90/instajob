@@ -115,7 +115,7 @@
                     //Boto per editar la oferta
                     var btnEditar = document.createElement("a");
                     btnEditar.setAttribute("class","btn btn-warning");
-                    btnEditar.setAttribute("href","/editarOferta/"+ofertes[keys[i]].idEmpresa);
+                    btnEditar.setAttribute("href","/editarOferta/"+ofertes[keys[i]].id);
                     btnEditar.innerHTML = "Editar oferta";
                     div.appendChild(btnEditar);
                     //Generem el boto per eliminar la oferta
