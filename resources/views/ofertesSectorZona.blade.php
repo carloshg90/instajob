@@ -17,12 +17,12 @@
             </a>
         </div>
         <div class="col-12">
-            <a href="{{ url('ofertesSeguits/') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
+            <a href="{{ url('/ofertesSeguits') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
             Ofertes de les mepreses que segueixo.
             </a>
         </div>
         <div class="col-12">
-            <a href="{{ url('correusEnviats/') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
+            <a href="{{ url('/correusEnviats') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
             Veure els meus correus enviats.
             </a>
         </div>

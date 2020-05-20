@@ -116,21 +116,13 @@ class ofertaController extends Controller
                     })
             ->where('ofertas.zona','=',Auth::user()->zona)
             ->where('ofertas.sector','=',Auth::user()->sector)->get();
-
-            $fitxer = fopen("C:/basura/basura.log","a+");
-            fwrite($fitxer,print_r("HE ENTRADO EN EL ELSE",true)."\n");
-            fwrite($fitxer,print_r(sizeof($ofertes),true)."\n");
-            fclose($fitxer);
         }
         else//No segueixo a ningú
         {
-            $fitxer = fopen("C:/basura/basura.log","a+");
-            fwrite($fitxer,print_r("HE ENTRADO EN EL ELSE",true)."\n");
             $ofertes = DB::table('ofertas')->select('*')
             ->where('ofertas.zona','=',Auth::user()->zona)
             ->where('ofertas.sector','=',Auth::user()->sector)->get();
-            fwrite($fitxer,print_r(sizeof($ofertes),true)."\n");
-            fclose($fitxer);
+
         }
          /**
          * Obtenim les ofertes de les empreses que no segueixo
