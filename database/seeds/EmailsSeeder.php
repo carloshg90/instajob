@@ -23,7 +23,7 @@ class EmailsSeeder extends Seeder
           ]);
           DB::table('emails')->insert([
             'id' => 2,
-            'idremitent' => 11,
+            'idremitent' => 13,
             'missatgeEnviat' => 'Crec que soc un bon aspirant a aquest lloc de treball.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',
@@ -33,7 +33,7 @@ class EmailsSeeder extends Seeder
           ]);
           DB::table('emails')->insert([
             'id' => 3,
-            'idremitent' => 11,
+            'idremitent' => 15,
             'missatgeEnviat' => 'Podeu contactar amb mi si em necessiteu.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',
@@ -43,7 +43,7 @@ class EmailsSeeder extends Seeder
           ]);
           DB::table('emails')->insert([
             'id' => 4,
-            'idremitent' => 11,
+            'idremitent' => 16,
             'missatgeEnviat' => 'Hola, gracies per la oportunitat.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',
@@ -53,7 +53,7 @@ class EmailsSeeder extends Seeder
           ]);
           DB::table('emails')->insert([
             'id' => 5,
-            'idremitent' => 11,
+            'idremitent' => 17,
             'missatgeEnviat' => 'Vull formar part de la vostra empresa.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',
@@ -63,7 +63,7 @@ class EmailsSeeder extends Seeder
           ]);
           DB::table('emails')->insert([
             'id' => 6,
-            'idremitent' => 11,
+            'idremitent' => 9,
             'missatgeEnviat' => 'Espero la vostra resposta.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',
@@ -73,7 +73,7 @@ class EmailsSeeder extends Seeder
           ]);
           DB::table('emails')->insert([
             'id' => 7,
-            'idremitent' => 11,
+            'idremitent' => 9,
             'missatgeEnviat' => 'Gracies per aquesta oportunitat.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',

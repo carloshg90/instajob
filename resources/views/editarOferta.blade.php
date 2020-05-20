@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="form-group row" style="display:flex;align-items: center;justify-content: center;">
-                        <form action="{{ action('ofertaController@editarOferta', $oferta->id) }}" method="POST" style="display:flex;">
+                        <form action="{{ action('ofertaController@EditarOferta', $oferta->id) }}" method="POST" style="display:flex;">
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
                             <button type="submit" class="btn btn-success">

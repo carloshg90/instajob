@@ -67,7 +67,6 @@ Route::get('/home', 'HomeController@index');
     Route::get('/correusEnviatsEmpresa', 'MailController@show2');
     Route::get('/correusEnviatsAjax', 'MailController@rebreCorreus');//Ajax
     Route::delete('/esborrarMissatge/{id}', 'MailController@esborrarMissatge');//Ajax
-
     //Formulari de contacte comú
     Route::get('/formulariContacte/{id}','MailController@index2');
     //Ruta per enviar el correu de contacte
