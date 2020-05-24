@@ -14,7 +14,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -44,20 +44,20 @@
 
                             <li class="dropdown">
                                 <a class="dropdown-toggle nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{ Auth::user()->name }}
+                                    <i class="fa fa-user-circle" aria-hidden="true"></i> {{ Auth::user()->name }}
                                   </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     @if(Auth::user()->hasRole('Empresa'))
-                                    <a class="dropdown-item" href="{{ url('/homeEmpresa') }}">Inici</a>
+                                    <a class="dropdown-item" href="{{ url('/homeEmpresa') }}"><i class="fa fa-home" aria-hidden="true"></i> Inici</a>
                                     @else
-                                    <a class="dropdown-item" href="{{ url('/homeTreballador') }}">Inici</a>
+                                    <a class="dropdown-item" href="{{ url('/homeTreballador') }}"><i class="fa fa-home" aria-hidden="true"></i> Inici</a>
                                     @endif
-                                    <a class="dropdown-item" href="{{ url('/perfil') }}">Veure el meu perfil</a>
-                                    <a class="dropdown-item" href="{{ url('/editarPerfil') }}">Editar informació del perfil</a>
-                                    <a class="dropdown-item" href="{{ url('/canviarContrassenya') }}">Canviar contrassenya</a>
+                                    <a class="dropdown-item" href="{{ url('/perfil') }}"><i class="fa fa-user" aria-hidden="true"></i> Veure el meu perfil</a>
+                                    <a class="dropdown-item" href="{{ url('/editarPerfil') }}"><i class="fa fa-pencil" aria-hidden="true"></i> Editar informació del perfil</a>
+                                    <a class="dropdown-item" href="{{ url('/canviarContrassenya') }}"><i class="fa fa-key" aria-hidden="true"></i> Canviar contrassenya</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                     document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>
                                         {{ __('Tancar sessió') }}
                                     </a>
 

@@ -14,24 +14,25 @@
 
             <div class="col-12">
                 <a href="{{ url('/ofertes') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
-                Crear una oferta.
+                    <i class="fa fa-plus-square" aria-hidden="true"></i> Crear oferta.
                 </a>
             </div>
 
             <div class="col-12">
                 <a href="{{ url('/ofertesCreades') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
-                Les meves ofertes.
+                    <i class="fa fa-briefcase" aria-hidden="true"></i> Les meves ofertes.
                 </a>
             </div>
             <div class="col-12">
                 <a href="{{ url('/correusEnviatsEmpresa') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
-                    Veure correus enviats.
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Correus enviats.
                 </a>
             </div>
 
             <div class="col-12">
+
                 <a href="{{ url('/buscarTreballadors') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
-                Buscar treballadors.
+                    <i class="fa fa-search" aria-hidden="true"></i> Buscar treballadors.
                 </a>
             </div>
 

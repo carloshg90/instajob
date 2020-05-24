@@ -108,9 +108,9 @@ class UsersSeeder extends Seeder
             'zona' => 'Girona'
         ),
         array(
-            'name' => 'Xavi Sala',
-            'email' => 'xavisala@gmail.com',
-            'password' => 'xavisala',
+            'name' => 'Josep Bruguera',
+            'email' => 'josepbruguera@gmail.com',
+            'password' => 'josepbruguera',
             'sector' => 'Banca',
             'horari' => 'Nit',
             'usuari' => 'Treballador',

@@ -32,7 +32,7 @@ class OfertesSeeder extends Seeder
           DB::table('ofertas')->insert([
             'id' => 3,
             'nomEmpresa' => 'Facebook',
-            'idEmpresa' => 3,
+            'idEmpresa' => 4,
             'sector' => 'Mecànica',
             'horari' => 'Tarda',
             'zona' => 'Asturias',
@@ -41,45 +41,45 @@ class OfertesSeeder extends Seeder
           DB::table('ofertas')->insert([
             'id' => 4,
             'nomEmpresa' => 'Marechiaro',
-            'idEmpresa' => 4,
-            'sector' => 'Construcció',
+            'idEmpresa' => 5,
+            'sector' => 'Hosteleria',
             'horari' => 'Tarda',
-            'zona' => 'Barcelona',
+            'zona' => 'Girona',
             'cos' => 'Busquem repartidor a domicili.',
           ]);
           DB::table('ofertas')->insert([
             'id' => 5,
             'nomEmpresa' => 'Whatsapp',
-            'idEmpresa' => 5,
+            'idEmpresa' => 6,
             'sector' => 'Hostelería',
-            'horari' => 'Matí',
+            'horari' => 'Tarda',
             'zona' => 'Girona',
             'cos' => 'Necessitem BetaTester amb experiencia.',
           ]);
           DB::table('ofertas')->insert([
             'id' => 6,
             'nomEmpresa' => 'CaixaBank',
-            'idEmpresa' => 6,
+            'idEmpresa' => 7,
             'sector' => 'Banca',
-            'horari' => 'Matí',
+            'horari' => 'Tarda',
             'zona' => 'Girona',
             'cos' => 'Busquem personal d\'atenció al public',
           ]);
           DB::table('ofertas')->insert([
             'id' => 7,
             'nomEmpresa' => 'Santander',
-            'idEmpresa' => 7,
+            'idEmpresa' => 8,
             'sector' => 'Banca',
-            'horari' => 'Matí',
+            'horari' => 'Tarda',
             'zona' => 'Girona',
             'cos' => 'Busquem algú que conti els calers que tenim.',
           ]);
           DB::table('ofertas')->insert([
             'id' => 8,
             'nomEmpresa' => 'Santander',
-            'idEmpresa' => 7,
+            'idEmpresa' => 8,
             'sector' => 'Banca',
-            'horari' => 'Matí',
+            'horari' => 'Tarda',
             'zona' => 'Girona',
             'cos' => 'Necessitem personal de seguretat en el nostre banc.',
           ]);
@@ -95,19 +95,55 @@ class OfertesSeeder extends Seeder
           DB::table('ofertas')->insert([
             'id' => 10,
             'nomEmpresa' => 'Santander',
-            'idEmpresa' => 7,
-            'sector' => 'Hostelería',
-            'horari' => 'Matí',
+            'idEmpresa' => 8,
+            'sector' => 'Banca',
+            'horari' => 'Tarda',
             'zona' => 'Girona',
             'cos' => 'Es busca personal per Setmana Santa.',
           ]);
           DB::table('ofertas')->insert([
             'id' => 11,
             'nomEmpresa' => 'Marechiaro',
-            'idEmpresa' => 4,
+            'idEmpresa' => 5,
             'sector' => 'Hostelería',
-            'horari' => 'Matí',
+            'horari' => 'Tarda',
             'zona' => 'Girona',
+            'cos' => 'Necessitem gent jove per aprendre a fer pizzes aquest estiu.',
+          ]);
+          DB::table('ofertas')->insert([
+            'id' => 12,
+            'nomEmpresa' => 'Instajob',
+            'idEmpresa' => 3,
+            'sector' => 'Banca',
+            'horari' => 'Nit',
+            'zona' => 'Tarragona',
+            'cos' => 'Es busca gent per Instajob.',
+          ]);
+          DB::table('ofertas')->insert([
+            'id' => 13,
+            'nomEmpresa' => 'Decathlon',
+            'idEmpresa' => 10,
+            'sector' => 'Hostelería',
+            'horari' => 'Tarda',
+            'zona' => 'Girona',
+            'cos' => 'Decathlon busca gent urgent.',
+          ]);
+          DB::table('ofertas')->insert([
+            'id' => 14,
+            'nomEmpresa' => 'Instagram',
+            'idEmpresa' => 12,
+            'sector' => 'Hostelería',
+            'horari' => 'Tarda',
+            'zona' => 'Girona',
+            'cos' => 'Necessitem gent per l\'empresa Instagram.',
+          ]);
+          DB::table('ofertas')->insert([
+            'id' => 15,
+            'nomEmpresa' => 'Cendrassos',
+            'idEmpresa' => 14,
+            'sector' => 'Construcció',
+            'horari' => 'Tarda',
+            'zona' => 'Barcelona',
             'cos' => 'Necessitem gent jove per aprendre a fer pizzes aquest estiu.',
           ]);
     }
