@@ -63,11 +63,11 @@
 
                 <div class="col-6">
                     <h2><ins>Informació de contacte</ins></h2>
-                    <p>C/Santa Llogaia, 30</p>
+                    <p>C/Girona, 30</p>
                     <p>17000, Figueres, Girona</p>
                     <p>CATALUNYA</p>
                     <p><i class="fa fa-phone"></i> +34 972 23 12 45</p>
-                    <p><i class="fa fa-envelope"></i> carlos@email.com</p>
+                    <p><i class="fa fa-envelope"></i> carloshg90@hotmail.com</p>
                 </div>
                 <div class="col-6">
                     <h2><ins>Social Media</ins></h2>

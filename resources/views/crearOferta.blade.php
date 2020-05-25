@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><h1><b>Nova oferta</b></h1></div>
+                <div class="card-header" style="text-align: center"><h1><b><u>Nova oferta</u></b></h1></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,10 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h3>Oferta creada per l'empresa: {{ Auth::user()->name }}</h3>
-                    <h3>En el sector: {{ Auth::user()->sector }}</h3>
-                    <h3>Per la zona: {{ Auth::user()->zona }}</h3>
-
+                    <h3>Empresa: {{ Auth::user()->name }}</h3>
+                    <h3>Sector: {{ Auth::user()->sector }}</h3>
+                    <h3>Zona: {{ Auth::user()->zona }}</h3>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ url('ofertes') }}">
@@ -55,30 +54,6 @@
                         </div>
                     </form>
                 </div>
-            </div>
-        </div>
-        <div class="col-2">
-            <div class="col-12">
-                <a href="{{ url('/ofertes') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
-                Crear una oferta.
-                </a>
-            </div>
-
-            <div class="col-12">
-                <a href="{{ url('/ofertesCreades') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
-                Les meves ofertes.
-                </a>
-            </div>
-            <div class="col-12">
-                <a href="{{ url('/correusEnviatsEmpresa') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
-                Veure correus enviats.
-                </a>
-            </div>
-
-            <div class="col-12">
-                <a href="{{ url('/buscarTreballadors') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
-                Buscar treballadors.
-                </a>
             </div>
         </div>
     </div>

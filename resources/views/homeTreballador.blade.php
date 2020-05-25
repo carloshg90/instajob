@@ -16,19 +16,20 @@
         </div>
         <div class="row opcions justify-content-center col-12">
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="{{ url('/ofertesSectorZona') }}" class="btn btn-dark">Descobrir ofertes relacionades amb el meu sector i zona de treball.
+                <a href="{{ url('/ofertesSectorZona') }}" class="btn btn-dark">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> Ofertes per sector i zona
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="{{ url('/ofertesSeguits') }}" class="btn  btn-dark">Veure les ofertes de les empreses a les que segueixo.
+                <a href="{{ url('/ofertesSeguits') }}" class="btn  btn-dark"><i class="fa fa-heart" aria-hidden="true"></i> Ofertes de les empreses a les que segueixo
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="{{ url('/correusEnviats') }}" class="btn  btn-dark">Veure l'historial de missatges enviats.
+                <a href="{{ url('/correusEnviats') }}" class="btn  btn-dark"><i class="fa fa-envelope" aria-hidden="true"></i> Correus enviats
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="{{ url('/buscarEmpreses') }}" class="btn  btn-dark">Buscar empreses.
+                <a href="{{ url('/buscarEmpreses') }}" class="btn  btn-dark"><i class="fa fa-search" aria-hidden="true"></i> Buscar empreses
                 </a>
             </div>
         </div>

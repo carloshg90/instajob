@@ -4325,7 +4325,8 @@ input[type=button].btn-block {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 1em;
+    background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/recursos/puzzleBN.jpg");
 }
 
 .navbar .container,
@@ -10055,4 +10056,63 @@ a.text-dark:focus {
         color: inherit;
         border-color: #dee2e6;
     }
+}
+
+.nav-link * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+
+.nav-link li {
+    display: inline-block;
+    list-style: outside none none;
+}
+
+.nav-link a {
+    padding: .5em .8em;
+    color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-link a::before,
+.nav-link a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+}
+
+.nav-link a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid rgb(87, 87, 87);
+    border-right: 3px solid rgb(87, 87, 87);
+    transform: translate(-100%, 50%);
+}
+
+.nav-link a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid rgb(87, 87, 87);
+    border-left: 3px solid rgb(87, 87, 87);
+    transform: translate(100%, -50%)
+}
+
+.nav-link a:hover:before,
+.nav-link a:hover:after {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.nav-link a:hover {
+    color: rgb(0, 0, 0);
+}
+
+a {
+    font-weight: bold;
 }

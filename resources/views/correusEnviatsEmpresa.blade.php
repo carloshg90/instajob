@@ -9,31 +9,6 @@
         <h1 style="text-align: center"><b>Missatges enviats a altres empreses.</b></h1>
         <hr>
     </div>
-        <!--Div dels botons-->
-    <div class="col-2">
-        <div class="col-12">
-            <a href="{{ url('/ofertes') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
-            Crear una oferta.
-            </a>
-        </div>
-
-        <div class="col-12">
-            <a href="{{ url('/ofertesCreades') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
-            Les meves ofertes.
-            </a>
-        </div>
-        <div class="col-12">
-            <a href="{{ url('/correusEnviatsEmpresa') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
-                Veure correus enviats.
-            </a>
-        </div>
-
-        <div class="col-12">
-            <a href="{{ url('/buscarTreballadors') }}" class="btn btn-outline-dark" style="margin-bottom: 1em">
-            Buscar treballadors.
-            </a>
-        </div>
-    </div>
 </div>
 
 <script>

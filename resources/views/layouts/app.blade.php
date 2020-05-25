@@ -24,8 +24,11 @@
             <div class="container">
                 <a class="navbar-brand" href="/" style="color:#777"><img style=" heigth: 100px; width: 100px" src="{{ asset('recursos/logo1.png') }}" alt="Logo" class="img-responsive"></a>
 
+
+
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -41,6 +44,49 @@
                                 </li>
                             @endif
                         @else
+                        @if(Auth::user()->hasRole('Empresa'))
+                        <li class="nav-link navbarlinks">
+                            <a href="{{ url('/ofertes') }}">
+                            <i class="fa fa-plus-square" aria-hidden="true"></i> Crear oferta</a>
+
+                        </li>
+                        <li class="nav-link navbarlinks">
+                            <a href="{{ url('/ofertesCreades') }}">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i> Les meves ofertes
+                            </a>
+                        </li>
+                        <li class="nav-link navbarlinks">
+                            <a href="{{ url('/correusEnviatsEmpresa') }}">
+                            <i class="fa fa-envelope" aria-hidden="true"></i> Correus enviats
+                            </a>
+                        </li>
+                        <li class="nav-link navbarlinks">
+                            <a href="{{ url('/buscarTreballadors') }}">
+                            <i class="fa fa-search" aria-hidden="true"></i> Buscar treballadors
+                            </a>
+                        </li>
+                        @else
+                        <li class="nav-link navbarlinks">
+                            <a href="{{ url('/ofertesSectorZona') }}">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> Ofertes per sector i zona
+                            </a>
+                        </li>
+                        <li class="nav-link navbarlinks">
+                            <a href="{{ url('/ofertesSeguits') }}">
+                                <i class="fa fa-heart" aria-hidden="true"></i> Ofertes de les empreses a les que segueixo
+                            </a>
+                        </li>
+                        <li class="nav-link navbarlinks">
+                            <a href="{{ url('/correusEnviats') }}">
+                                <i class="fa fa-envelope" aria-hidden="true"></i> Correus enviats
+                            </a>
+                        </li>
+                        <li class="nav-link navbarlinks">
+                            <a href="{{ url('/buscarEmpreses') }}">
+                                <i class="fa fa-search" aria-hidden="true"></i> Buscar empreses
+                            </a>
+                        </li>
+                        @endif
 
                             <li class="dropdown">
                                 <a class="dropdown-toggle nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
