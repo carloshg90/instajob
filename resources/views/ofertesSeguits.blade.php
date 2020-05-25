@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="{{ asset('css/ofertesSeguits.css') }}" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <div class="container">
     <div class="row justify-content-center">
@@ -42,6 +43,11 @@
                     //Generar nombre de la empresa
                     var a = document.createElement('a');
                     var h3 = document.createElement('h3');
+                    h3.setAttribute("class","nomEmpresa");
+                    var img = document.createElement("img");
+                    img.setAttribute("src","/recursos/pieza.png");
+                    img.setAttribute("class","pieza");
+                    h3.appendChild(img);
                     var linkText = document.createTextNode(ofertes[keys[i]].nomEmpresa);
                     var idEmpresa = ofertes[keys[i]].idEmpresa;
                     h3.appendChild(linkText);
@@ -87,16 +93,23 @@
                     div.appendChild(h5detalls);
                     //Generem el boto per deixar de seguir a l'empresa
                     var btnSeguir = document.createElement("button");
+                    var iNoSeguir = document.createElement("i");
+                    iNoSeguir.setAttribute("class","fa fa-times-circle");
+                    iNoSeguir.setAttribute("aria-hidden","true");
                     btnSeguir.setAttribute("class","btn btn-danger");
                     btnSeguir.setAttribute("onclick","deixarDeSeguir("+ofertes[keys[i]].idEmpresa+")");
-                    btnSeguir.innerHTML = "Deixar de seguir a l'empresa";
-                    btnSeguir.style.marginRight = "0.3em";
+                    btnSeguir.innerHTML = "Deixar de seguir ";
+                    btnSeguir.appendChild(iNoSeguir);
                     div.appendChild(btnSeguir);
                     //Generem el boto per contactar amb l'empresa
                     var btnContactar = document.createElement("a");
+                    var iContactar = document.createElement("i");
+                    iContactar.setAttribute("class","fa fa-envelope");
+                    iContactar.setAttribute("aria-hidden","true");
                     btnContactar.setAttribute("class","btn btn-success "+ofertes[keys[i]].idEmpresa+" ");
                     btnContactar.setAttribute("href","formMail/"+ofertes[keys[i]].idEmpresa);
-                    btnContactar.innerHTML = "M'interesa aquesta oferta!";
+                    btnContactar.innerHTML = "M'interesa l'oferta! ";
+                    btnContactar.appendChild(iContactar);
                     div.appendChild(btnContactar);
                     var hr = document.createElement('hr');
                     div.appendChild(hr);

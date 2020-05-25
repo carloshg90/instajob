@@ -73,10 +73,14 @@
                     div.appendChild(h5missatge);
                     //Posem un botó per esborrar aquell missatge
                     var btnSeguir = document.createElement("button");
+                    var iEsborrar = document.createElement("i");
+                    iEsborrar.setAttribute("class","fa fa-trash");
+                    iEsborrar.setAttribute("aria-hidden","true");
                     btnSeguir.setAttribute("class","btn btn-danger");
                     btnSeguir.setAttribute("onclick","esborrarMissatge("+emails[keys[i]].id+")");
-                    btnSeguir.innerHTML = "Esborrar missatge";
+                    btnSeguir.innerHTML = "Esborrar missatge ";
                     btnSeguir.style.marginRight = "0.3em";
+                    btnSeguir.appendChild(iEsborrar);
                     div.appendChild(btnSeguir);
                     var hr = document.createElement('hr');
                     div.appendChild(hr);

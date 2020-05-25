@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
 </head>
 <body>
     <div id="app">
@@ -24,7 +26,11 @@
             <div class="container">
                 <a class="navbar-brand" href="/" style="color:#777"><img style=" heigth: 100px; width: 100px" src="{{ asset('recursos/logo1.png') }}" alt="Logo" class="img-responsive"></a>
 
+                <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>-->
 
+                  <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
 
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
@@ -114,7 +120,7 @@
                             </li>
                         @endguest
                     </ul>
-
+                <!--</div>-->
             </div>
         </nav>
 

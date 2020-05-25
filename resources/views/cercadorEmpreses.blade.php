@@ -127,9 +127,13 @@
                 li.appendChild(h5detalls);
                 //Boto per contactar amb el treballador
                 var btnContactar = document.createElement("a");
+                var iContactar = document.createElement("i");
+                iContactar.setAttribute("class","fa fa-envelope");
+                iContactar.setAttribute("aria-hidden","true");
                 btnContactar.setAttribute("class","btn btn-primary "+empreses[i].id+" ");
                 btnContactar.setAttribute("href","formulariContacte/"+empreses[i].id);
-                btnContactar.innerHTML = "Contactar";
+                btnContactar.innerHTML = "Contactar ";
+                btnContactar.appendChild(iContactar)
                 li.appendChild(btnContactar);
                 var hr = document.createElement('hr');
                 li.appendChild(hr);
