@@ -5,8 +5,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-8"  id="padre">
-            <h1><b>Busca aquí possibles treballadors.</b></h1>
+        <div class="col-md-8"  id="padre">
+            <h1><b><i class="fa fa-search" aria-hidden="true"></i> Busca aquí possibles treballadors.</b></h1>
             <!--Cercador-->
             <input type="text" id="cercador" class="form-control" placeholder="Busca per sector, zona, nom de treballador, horari...">
             <hr>
@@ -77,11 +77,15 @@
                 var principal = document.getElementById("principal");
                 var div = document.createElement('div');
                 //Generem un div per cada oferta amb el id de la oferta
-                div.setAttribute("class",treballadors[i].id);
+                div.setAttribute("class",treballadors[i].id+" empresa");
                 principal.appendChild(div);
                 //Generar nom del treballador
                 var a = document.createElement('a');
                 var h3 = document.createElement('h3');
+                var img = document.createElement("img");
+                img.setAttribute("src","/recursos/pieza.png");
+                img.setAttribute("class","pieza");
+                h3.appendChild(img);
                 var linkText = document.createTextNode(treballadors[i].name);
                 var idEmpresa = treballadors[i].idEmpresa;
                 h3.appendChild(linkText);
@@ -125,6 +129,10 @@
                 h5detalls.appendChild(detallsh5);
                 bdetalls.appendChild(detallsb);
                 div.appendChild(h5detalls);
+                //Generem els botons
+                var divBotons = document.createElement("div");
+                divBotons.setAttribute("class","divBotons");
+                div.appendChild(divBotons);
                 //Boto per contactar amb el treballador
                 var btnContactar = document.createElement("a");
                 var iContactar = document.createElement("i");
@@ -134,9 +142,7 @@
                 btnContactar.setAttribute("href","formulariContacte/"+treballadors[i].id);
                 btnContactar.innerHTML = "Contactar ";
                 btnContactar.appendChild(iContactar);
-                div.appendChild(btnContactar);
-                var hr = document.createElement('hr');
-                div.appendChild(hr);
+                divBotons.appendChild(btnContactar);
             }
         }
     }

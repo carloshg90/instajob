@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="{{ asset('css/ofertesTreballador.css') }}" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <div class="container">
     <div class="row justify-content-center">
-
-        <div class="col-8" id="principal">
-            <h1><b>Aquestes son les ofertes creades per la teva empresa.</b></h1>
+        <div class="col-md-8" id="principal">
+            <h1 style="text-align: center"><b>Aquestes son les ofertes creades per la teva empresa.</b></h1>
             <hr>
         </div>
     </div>
@@ -37,13 +37,17 @@
                     var principal = document.getElementById("principal");
                     var div = document.createElement('div');
                     //Generem un div per cada oferta amb el id de la oferta
-                    div.setAttribute("class",ofertes[keys[i]].id);
+                    div.setAttribute("class",ofertes[keys[i]].id+" oferta");
                     principal.appendChild(div);
                     //Generar nombre de la empresa
                     var a = document.createElement('a');
                     var h3 = document.createElement('h3');
                     var linkText = document.createTextNode(ofertes[keys[i]].nomEmpresa);
                     var idEmpresa = ofertes[keys[i]].idEmpresa;
+                    var img = document.createElement("img");
+                    img.setAttribute("src","/recursos/pieza.png");
+                    img.setAttribute("class","pieza");
+                    h3.appendChild(img);
                     h3.appendChild(linkText);
                     a.setAttribute("href","/perfilAlie/"+ofertes[keys[i]].idEmpresa);
                     a.appendChild(h3);
@@ -85,21 +89,30 @@
                     h5detalls.appendChild(detallsh5);
                     bdetalls.appendChild(detallsb);
                     div.appendChild(h5detalls);
+                    //Generem els botons
+                    var divBotons = document.createElement("div");
+                    divBotons.setAttribute("class","divBotons");
+                    div.appendChild(divBotons);
                     //Boto per editar la oferta
                     var btnEditar = document.createElement("a");
+                    var iEditar = document.createElement("i");
+                    iEditar.setAttribute("class","fa fa-pencil");
+                    iEditar.setAttribute("aria-hidden","true");
                     btnEditar.setAttribute("class","btn btn-warning");
                     btnEditar.setAttribute("href","/editarOferta/"+ofertes[keys[i]].id);
-                    btnEditar.innerHTML = "Editar oferta";
-                    div.appendChild(btnEditar);
+                    btnEditar.innerHTML = "Editar oferta ";
+                    btnEditar.appendChild(iEditar);
+                    divBotons.appendChild(btnEditar);
                     //Generem el boto per eliminar la oferta
                     var btnDelete = document.createElement("button");
+                    var iDelete = document.createElement("i");
+                    iDelete.setAttribute("class","fa fa-trash");
+                    iDelete.setAttribute("aria-hidden","true");
                     btnDelete.setAttribute("class","btn btn-danger");
                     btnDelete.setAttribute("onclick","eliminarOferta("+ofertes[keys[i]].id+")");
-                    btnDelete.innerHTML = "Eliminar oferta";
-                    div.appendChild(btnDelete);
-
-                    var hr = document.createElement('hr');
-                    div.appendChild(hr);
+                    btnDelete.innerHTML = "Eliminar oferta ";
+                    btnDelete.appendChild(iDelete);
+                    divBotons.appendChild(btnDelete);
                 }
               }
           }

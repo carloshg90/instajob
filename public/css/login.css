@@ -1,28 +1,23 @@
 .card {
-    margin-top: 20%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .card-body {
     background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/recursos/puzzleBN.jpg");
 }
 
+h3 {
+    font-family: 'Lalezar', cursive;
+}
+
 .card-header {
     text-align: center;
 }
 
-html,
-body {
-    background-image: linear-gradient( rgba(255, 255, 255), rgba(126, 126, 126));
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    overflow: hidden;
+body,
+html {
+    background: linear-gradient(90deg, rgba(149, 149, 149, 1) 0%, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 95%, rgba(162, 162, 162, 1) 100%);
 }

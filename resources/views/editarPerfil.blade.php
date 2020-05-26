@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="{{ asset('css/ofertesTreballador.css') }}" rel="stylesheet">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Editar perfil</div>
+                <div class="card-header" style="text-align: center"><h1>Editar perfil de {{ Auth::user()->name }}</h1></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,7 +14,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h1>Editar perfil de {{ Auth::user()->name }}</h1>
+
 
                 </div>
                 <div class="card-body">
@@ -23,7 +24,7 @@
 
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nom') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right"><b>{{ __('Nom:') }}</b></label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ Auth::user()->name }}" required autocomplete="name" autofocus>
@@ -37,7 +38,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correu electrònic') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right"><b>{{ __('Correu electrònic:') }}</b></label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ Auth::user()->email }}" required autocomplete="email">
@@ -51,7 +52,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="sector" class="col-md-4 col-form-label text-md-right">{{ __('Sector de treball') }}</label>
+                            <label for="sector" class="col-md-4 col-form-label text-md-right"><b>{{ __('Sector de treball:') }}</b></label>
 
                             <div class="col-md-6">
                             <select name="sector" id="sector" class="form-control" required>
@@ -65,7 +66,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="horari" class="col-md-4 col-form-label text-md-right">{{ __('Horari de treball') }}</label>
+                            <label for="horari" class="col-md-4 col-form-label text-md-right"><b>{{ __('Horari de treball:') }}</b></label>
                             <div class="col-md-6">
                             <select name="horari" id="horari" class="form-control" required>
                                 <option value="{{ Auth::user()->horari }}">{{ Auth::user()->horari }}</option>
@@ -81,7 +82,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="zona" class="col-md-4 col-form-label text-md-right">{{ __('Zona de treball') }}</label>
+                            <label for="zona" class="col-md-4 col-form-label text-md-right"><b>{{ __('Zona de treball:') }}</b></label>
 
                             <div class="col-md-6">
                             <select name="zona" id="zona" class="form-control" required>
@@ -91,7 +92,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contrassenya') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right"><b>{{ __('Contrassenya:') }}</b></label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -106,8 +107,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" id="registrar" class="btn btn-primary">
-                                    {{ __('Confirmar canvis') }}
+                                <button type="submit" id="registrar" class="btn btn-success">
+                                    {{ __('Confirmar canvis') }} <i class="fa fa-check" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>

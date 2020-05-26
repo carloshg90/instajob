@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="{{ asset('css/ofertesTreballador.css') }}" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <div class="container">
     <div class="row justify-content-center">
         <!--Div de les ofertes-->
-    <div class="col-8" id="principal">
+    <div class="col-md-8" id="principal">
         <h1 style="text-align: center"><b>Missatges enviats a altres empreses.</b></h1>
         <hr>
     </div>
@@ -34,7 +35,7 @@
                 for (var i = 0, len = keys.length; i < len; i++) {
                     var principal = document.getElementById("principal");
                     var div = document.createElement('div');
-                    div.setAttribute("class",emails[keys[i]].id);
+                    div.setAttribute("class",emails[keys[i]].id+" oferta");
                     principal.appendChild(div);
                     //Generar nombre de la empresa
                     var a = document.createElement('a');
@@ -71,6 +72,10 @@
                     h5missatge.appendChild(missatgeh5);
                     bmissatge.appendChild(missatgeb);
                     div.appendChild(h5missatge);
+                    //Generem els botons
+                    var divBotons = document.createElement("div");
+                    divBotons.setAttribute("class","divBotons");
+                    div.appendChild(divBotons);
                     //Posem un botó per esborrar aquell missatge
                     var btnSeguir = document.createElement("button");
                     var iEsborrar = document.createElement("i");
@@ -81,9 +86,8 @@
                     btnSeguir.innerHTML = "Esborrar missatge ";
                     btnSeguir.style.marginRight = "0.3em";
                     btnSeguir.appendChild(iEsborrar);
-                    div.appendChild(btnSeguir);
-                    var hr = document.createElement('hr');
-                    div.appendChild(hr);
+                    divBotons.appendChild(btnSeguir);
+
                 }
               }
           }

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<link href="{{ asset('css/ofertesSectorZona.css') }}" rel="stylesheet">
+<link href="{{ asset('css/ofertesTreballador.css') }}" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <div class="container">
     <div class="row justify-content-center">
@@ -35,7 +35,7 @@
                 for (var i = 0, len = keys.length; i < len; i++) {
                     var principal = document.getElementById("principal");
                     var div = document.createElement('div');
-                    div.setAttribute("class",ofertes[keys[i]].idEmpresa);
+                    div.setAttribute("class",ofertes[keys[i]].idEmpresa+ " oferta");
                     principal.appendChild(div);
                     //Generar nombre de la empresa
                     var a = document.createElement('a');
@@ -89,6 +89,9 @@
                     bdetalls.appendChild(detallsb);
                     div.appendChild(h5detalls);
                     //Generem els botons
+                    var divBotons = document.createElement("div");
+                    divBotons.setAttribute("class","divBotons");
+                    div.appendChild(divBotons);
                     //SEGUIR
                     var btnSeguir = document.createElement("button");
                     var iSeguir = document.createElement("i");
@@ -98,7 +101,7 @@
                     btnSeguir.setAttribute("onclick","seguir("+ofertes[keys[i]].idEmpresa+")");
                     btnSeguir.innerHTML = "Seguir a questa empresa! ";
                     btnSeguir.appendChild(iSeguir);
-                    div.appendChild(btnSeguir);
+                    divBotons.appendChild(btnSeguir);
                     //MISSATGE
                     var btnContactar = document.createElement("a");
                     var iContactar = document.createElement("i");
@@ -108,9 +111,8 @@
                     btnContactar.setAttribute("href","formMail/"+ofertes[keys[i]].id);
                     btnContactar.innerHTML = "M'interesa l'oferta! ";
                     btnContactar.appendChild(iContactar);
-                    div.appendChild(btnContactar);
-                    var hr = document.createElement('hr');
-                    div.appendChild(hr);
+                    divBotons.appendChild(btnContactar);
+
                 }
               }
           }

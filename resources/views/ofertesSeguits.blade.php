@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<link href="{{ asset('css/ofertesSeguits.css') }}" rel="stylesheet">
+<link href="{{ asset('css/ofertesTreballador.css') }}" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <div class="container">
     <div class="row justify-content-center">
         <!--Div de les ofertes-->
-        <div class="col-8" id="principal">
+        <div class="col-md-8" id="principal">
             <h1 style="text-align: center"><b>Ofertes que ofereixen les empreses a les quals segueixes.</b></h1>
             <hr>
         </div>
@@ -38,7 +38,7 @@
                     var principal = document.getElementById("principal");
                     var div = document.createElement('div');
                     //Generem un div per cada oferta amb el id de la oferta
-                    div.setAttribute("class",ofertes[keys[i]].idEmpresa);
+                    div.setAttribute("class",ofertes[keys[i]].idEmpresa+ " oferta");
                     principal.appendChild(div);
                     //Generar nombre de la empresa
                     var a = document.createElement('a');
@@ -91,6 +91,10 @@
                     h5detalls.appendChild(detallsh5);
                     bdetalls.appendChild(detallsb);
                     div.appendChild(h5detalls);
+                    //Generem els botons
+                    var divBotons = document.createElement("div");
+                    divBotons.setAttribute("class","divBotons");
+                    div.appendChild(divBotons);
                     //Generem el boto per deixar de seguir a l'empresa
                     var btnSeguir = document.createElement("button");
                     var iNoSeguir = document.createElement("i");
@@ -100,19 +104,18 @@
                     btnSeguir.setAttribute("onclick","deixarDeSeguir("+ofertes[keys[i]].idEmpresa+")");
                     btnSeguir.innerHTML = "Deixar de seguir ";
                     btnSeguir.appendChild(iNoSeguir);
-                    div.appendChild(btnSeguir);
+                    divBotons.appendChild(btnSeguir);
                     //Generem el boto per contactar amb l'empresa
                     var btnContactar = document.createElement("a");
                     var iContactar = document.createElement("i");
                     iContactar.setAttribute("class","fa fa-envelope");
                     iContactar.setAttribute("aria-hidden","true");
-                    btnContactar.setAttribute("class","btn btn-success "+ofertes[keys[i]].idEmpresa+" ");
+                    btnContactar.setAttribute("class","btn btn-primary "+ofertes[keys[i]].idEmpresa+" ");
                     btnContactar.setAttribute("href","formMail/"+ofertes[keys[i]].idEmpresa);
                     btnContactar.innerHTML = "M'interesa l'oferta! ";
                     btnContactar.appendChild(iContactar);
-                    div.appendChild(btnContactar);
-                    var hr = document.createElement('hr');
-                    div.appendChild(hr);
+                    divBotons.appendChild(btnContactar);
+
                 }
               }
           }

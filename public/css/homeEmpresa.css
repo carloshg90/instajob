@@ -41,3 +41,7 @@ img {
     align-content: center;
     flex-direction: column;
 }
+
+h3 {
+    font-family: 'Limelight', cursive;
+}

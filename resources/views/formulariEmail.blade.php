@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container col-6">
+<link href="{{ asset('css/ofertesTreballador.css') }}" rel="stylesheet">
+<div class="container col-md-8">
     <h1 align="center"><b>Has decidit contactar amb l'empresa {{$empresa->name}}</b></h1>
     <br/>
     @if (count($errors) > 0)
@@ -58,8 +59,8 @@
       <label>Missatge per l'empresa:</label>
       <textarea name="message" class="form-control"></textarea>
     </div>
-     <div class="form-group">
-      <input type="submit" name="send" class="btn btn-info" value="Enviar" />
+     <div class="form-group divBotons">
+      <input type="submit" name="send" class="btn btn-success" value="Enviar" />
      </div>
     </form>
 @endsection

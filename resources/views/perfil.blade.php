@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="{{ asset('css/ofertesTreballador.css') }}" rel="stylesheet">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -9,16 +10,17 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <h1 style="text-align: center"><b>Benvingut al teu perfil.</b></h1><br>
+
             <div class="card">
-                <div class="card-header" style="text-align: center" ><h3>Informació del teu perfil</h3></div>
+                <div class="card-header" style="text-align: center" ><h1>Informació del teu perfil</h1></div>
                 <div class="card-body">
-                    -Nom: {{ Auth::user()->name }}<br></br>
-                    -Direcció de correu: {{ Auth::user()->email }}<br></br>
-                    -Sector de treball: {{ Auth::user()->sector }}<br></br>
-                    -Horari de treball: {{ Auth::user()->horari }}<br></br>
-                    -Usuari registrat com: {{ Auth::user()->usuari }}<br></br>
-                    -Zona de treball: {{ Auth::user()->zona }}
+                    <b>-Nom:</b> {{ Auth::user()->name }}<br>
+                    <b>-Direcció de correu:</b> {{ Auth::user()->email }}<br>
+                    <b>-Sector de treball:</b> {{ Auth::user()->sector }}<br>
+                    <b>-Horari de treball:</b> {{ Auth::user()->horari }}<br>
+                    <b>-Tipus d'usuari:</b> {{ Auth::user()->usuari }}<br>
+                    <b>-Zona de treball:</b> {{ Auth::user()->zona }}<br>
+                    <div class="divBotons"><a class="btn btn-warning" href="{{ url('/editarPerfil') }}"><i class="fa fa-pencil" aria-hidden="true"></i> Editar perfil</a></div>
                 </div>
             </div>
         </div>

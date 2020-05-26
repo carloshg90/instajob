@@ -79,7 +79,7 @@
                     <a href="https://www.instagram.com" class="fa fa-instagram"></a>
                 </div>
                 <div class="col-12">
-                    <p>Web creada per Carlos Javier Hinojosa Garcia</p>
+                    <p class="creador">Web creada per Carlos Javier Hinojosa Garcia</p>
                 </div>
             </div>
         </div>

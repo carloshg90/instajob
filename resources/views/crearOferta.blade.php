@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="{{ asset('css/ofertesTreballador.css') }}" rel="stylesheet">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -13,9 +14,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h3>Empresa: {{ Auth::user()->name }}</h3>
-                    <h3>Sector: {{ Auth::user()->sector }}</h3>
-                    <h3>Zona: {{ Auth::user()->zona }}</h3>
+                    <h3><b>Empresa:</b> {{ Auth::user()->name }}</h3>
+                    <h3><b>Sector:</b> {{ Auth::user()->sector }}</h3>
+                    <h3><b>Zona:</b> {{ Auth::user()->zona }}</h3>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ url('ofertes') }}">
@@ -23,7 +24,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group row">
-                            <label for="horari" class="col-md-4 col-form-label text-md-right">{{ __('Horari de treball.') }}</label>
+                            <label for="horari" class="col-md-4 col-form-label text-md-right"><b>{{ __('Horari de treball:') }}</b></label>
                             <div class="col-md-6">
                             <select name="horari" id="horari" class="form-control" required>
                                 <option value="Mati">Mati</option>
@@ -38,7 +39,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="cos" class="col-md-4 col-form-label text-md-right">{{ __('Detalls de la teva oferta:') }}</label>
+                            <label for="cos" class="col-md-4 col-form-label text-md-right"><b>{{ __('Detalls de la teva oferta:') }}</b></label>
 
                             <div class="col-md-6">
                                 <input id="cos" type="text" class="form-control" name="cos" required>
@@ -48,7 +49,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" id="registrar" class="btn btn-success">
-                                    {{ __('Crear oferta') }}
+                                    {{ __('Crear oferta') }} <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>
