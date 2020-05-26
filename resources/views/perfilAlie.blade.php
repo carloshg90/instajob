@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="{{ asset('css/ofertesTreballador.css') }}" rel="stylesheet">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -9,18 +10,19 @@
                         {{ session('status') }}
                     </div>
                     @endif
-                    <h1 style="text-align: center"><b>Perfil de l'usuari {{ $perfil->name }}</b></h1><br>
     <div class="card">
-        <div style="text-align: center" class="card-header"><h3>Informació del perfil</h3></div>
+        <div style="text-align: center" class="card-header"><h1><b>Perfil de l'usuari {{ $perfil->name }}</b></h1></div>
             <div class="card-body">
-                -Nom: {{ $perfil->name }}<br></br>
-                -Direcció de correu: {{ $perfil->email }}<br></br>
-                -Sector de treball: {{ $perfil->sector }}<br></br>
-                -Horari de treball: {{ $perfil->horari }}<br></br>
-                -Usuari registrat com: {{ $perfil->usuari }}<br></br>
-                -Zona de treball: {{ $perfil->zona }}
+                <b>-Nom:</b> {{ $perfil->name }}<br>
+                <b>-Direcció de correu:</b> {{ $perfil->email }}<br>
+                <b>-Sector de treball:</b> {{ $perfil->sector }}<br>
+                <b>-Horari de treball:</b> {{ $perfil->horari }}<br>
+                <b>-Usuari registrat com:</b> {{ $perfil->usuari }}<br>
+                <b>-Zona de treball:</b> {{ $perfil->zona }}
             </div>
-            <a class="btn btn-success" href="/formulariContacte/{{$perfil->id}}">Contactar</a>
+            <div class="divBotons">
+            <a class="btn btn-success" href="/formulariContacte/{{$perfil->id}}">Contactar <i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
         </div>
     </div>
 </div>

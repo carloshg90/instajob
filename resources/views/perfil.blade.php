@@ -20,7 +20,9 @@
                     <b>-Horari de treball:</b> {{ Auth::user()->horari }}<br>
                     <b>-Tipus d'usuari:</b> {{ Auth::user()->usuari }}<br>
                     <b>-Zona de treball:</b> {{ Auth::user()->zona }}<br>
-                    <div class="divBotons"><a class="btn btn-warning" href="{{ url('/editarPerfil') }}"><i class="fa fa-pencil" aria-hidden="true"></i> Editar perfil</a></div>
+                    <div class="divBotons">
+                        <a class="btn btn-warning" href="{{ url('/editarPerfil') }}"><i class="fa fa-pencil" aria-hidden="true"></i> Editar perfil</a>
+                    </div>
                 </div>
             </div>
         </div>
