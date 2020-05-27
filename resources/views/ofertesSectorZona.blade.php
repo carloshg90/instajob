@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <!--Div de les ofertes-->
         <div class="col-md-8" id="principal">
-            <h1 style="text-align: center"><b>Ofertes que coincideixen amb el teu setor i zona de treball.</b></h1>
+            <h1 style="text-align: center"><b>Ofertes que coincideixen amb el teu sector i zona de treball.</b></h1>
             <hr>
         </div>
     </div>
@@ -99,7 +99,7 @@
                     iSeguir.setAttribute("aria-hidden","true");
                     btnSeguir.setAttribute("class","btn btn-success "+ofertes[keys[i]].idEmpresa+" ");
                     btnSeguir.setAttribute("onclick","seguir("+ofertes[keys[i]].idEmpresa+")");
-                    btnSeguir.innerHTML = "Seguir a questa empresa! ";
+                    btnSeguir.innerHTML = "Seguir a aquesta empresa! ";
                     btnSeguir.appendChild(iSeguir);
                     divBotons.appendChild(btnSeguir);
                     //MISSATGE
@@ -109,7 +109,7 @@
                     iContactar.setAttribute("aria-hidden","true");
                     btnContactar.setAttribute("class","btn btn-primary "+ofertes[keys[i]].idEmpresa+" ");
                     btnContactar.setAttribute("href","formMail/"+ofertes[keys[i]].id);
-                    btnContactar.innerHTML = "M'interesa l'oferta! ";
+                    btnContactar.innerHTML = "M'interessa l'oferta! ";
                     btnContactar.appendChild(iContactar);
                     divBotons.appendChild(btnContactar);
 

@@ -79,13 +79,13 @@
                             <label for="horari" class="col-md-4 col-form-label text-md-right"><b>{{ __('Horari de treball') }}</b></label>
                             <div class="col-md-6">
                             <select name="horari" id="horari" class="form-control" required>
-                                <option value="Mati">Mati</option>
+                                <option value="Mati">Matí</option>
                                 <option value="Tarda">Tarda</option>
                                 <option value="Nit">Nit</option>
                                 <option value="Matí i tarda">Matí i tarda</option>
                                 <option value="Tarda i nit">Tarda i nit</option>
                                 <option value="Matí i nit">Matí i nit</option>
-                                <option value="Mati, tarda i nit">Mati,tarda i nit</option>
+                                <option value="Mati, tarda i nit">Matí, tarda i nit</option>
                             </select>
                             </div>
                         </div>

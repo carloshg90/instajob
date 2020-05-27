@@ -2,7 +2,7 @@
 
 @section('content')
 <link href="{{ asset('css/ofertesTreballador.css') }}" rel="stylesheet">
-<div class="container col-md-8">
+<div class="container col-md-6">
     <h1 align="center"><b><u>Formulari de contacte.</u></b></h1>
     <br/>
     @if (count($errors) > 0)

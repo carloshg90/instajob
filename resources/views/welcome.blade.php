@@ -35,7 +35,7 @@
                         <h4>El lloc on trobaràs el que necessites.</h4>
                     </div>
                     <div class="col-12">
-                        <h5>Necesites feina? Busques algú per la teva empresa? Registra't o inicia sessió i descobreix el que podem fer per tú.</h5><br>
+                        <h5>Necessites feina? Busques algú per la teva empresa? Registra't o inicia sessió i descobreix el que podem fer per tú.</h5><br>
                     </div>
                     @if (Route::has('login'))
                     @auth

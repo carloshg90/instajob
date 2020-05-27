@@ -112,7 +112,7 @@
                     iContactar.setAttribute("aria-hidden","true");
                     btnContactar.setAttribute("class","btn btn-primary "+ofertes[keys[i]].idEmpresa+" ");
                     btnContactar.setAttribute("href","formMail/"+ofertes[keys[i]].idEmpresa);
-                    btnContactar.innerHTML = "M'interesa l'oferta! ";
+                    btnContactar.innerHTML = "M'interessa l'oferta! ";
                     btnContactar.appendChild(iContactar);
                     divBotons.appendChild(btnContactar);
 

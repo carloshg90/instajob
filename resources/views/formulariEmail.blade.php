@@ -2,7 +2,7 @@
 
 @section('content')
 <link href="{{ asset('css/ofertesTreballador.css') }}" rel="stylesheet">
-<div class="container col-md-8">
+<div class="container col-md-6">
     <h1 align="center"><b>Has decidit contactar amb l'empresa {{$empresa->name}}</b></h1>
     <br/>
     @if (count($errors) > 0)
@@ -57,7 +57,7 @@
 
     <div class="form-group">
       <label>Missatge per l'empresa:</label>
-      <textarea name="message" class="form-control"></textarea>
+      <textarea name="message" class="form-control" placeholder="Hola, m'interessa la vostra oferta de treball..."></textarea>
     </div>
      <div class="form-group divBotons">
       <input type="submit" name="send" class="btn btn-success" value="Enviar" />

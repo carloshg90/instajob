@@ -17,22 +17,22 @@
         <div class="row opcions justify-content-center col-12">
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <a href="{{ url('/ofertes') }}" class="btn  btn-dark">
-                    <i class="fa fa-plus-square" aria-hidden="true"></i> Crear una nova oferta.
+                    <i class="fa fa-plus-square" aria-hidden="true"></i> Crear una nova oferta
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <a href="{{ url('/ofertesCreades') }}" class="btn btn-dark">
-                    <i class="fa fa-briefcase" aria-hidden="true"></i> Gestionar les meves ofertes.
+                    <i class="fa fa-briefcase" aria-hidden="true"></i> Gestionar les meves ofertes
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <a href="{{ url('/correusEnviatsEmpresa') }}" class="btn  btn-dark">
-                    <i class="fa fa-envelope" aria-hidden="true"></i> Veure l'historial de missatges enviats.
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Veure l'historial de missatges enviats
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <a href="{{ url('/buscarTreballadors') }}" class="btn  btn-dark">
-                    <i class="fa fa-search" aria-hidden="true"></i> Buscar empleats potencials.
+                    <i class="fa fa-search" aria-hidden="true"></i> Buscar empleats potencials
                 </a>
             </div>
         </div>
