@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <!--Div de les ofertes-->
     <div class="col-md-8" id="principal">
-        <h1 style="text-align: center"><b>Missatges enviats a altres empreses.</b></h1>
+        <h1 style="text-align: center"><b>Missatges enviats.</b></h1>
         <hr>
     </div>
 </div>
