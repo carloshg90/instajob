@@ -27,7 +27,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <a href="{{ url('/correusEnviatsEmpresa') }}" class="btn  btn-dark">
-                    <i class="fa fa-envelope" aria-hidden="true"></i> Veure l'historial de missatges enviats
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Correus enviats
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
