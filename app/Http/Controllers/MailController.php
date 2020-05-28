@@ -22,8 +22,7 @@ class MailController extends Controller
     public function index($id)
     {
         $oferta = Oferta::findOrFail($id);
-        $idempresa = Oferta::select('idempresa')->where('id','=',$id);
-        $empresa = User::findOrFail($id);
+        $empresa = User::findOrFail($oferta->idEmpresa);
         return view('formulariEmail',['empresa'=> $empresa,'oferta'=>$oferta]);
     }
 
