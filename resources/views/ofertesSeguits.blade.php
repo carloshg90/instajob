@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <!--Div de les ofertes-->
         <div class="col-md-8" id="principal">
-            <h1 style="text-align: center"><b>Ofertes que ofereixen les empreses a les quals segueixes.</b></h1>
+            <h1 style="text-align: center"><b>Ofertes de les empreses que segueixo.</b></h1>
             <hr>
         </div>
     </div>

@@ -44,7 +44,7 @@
 
         <hr>
     <h3>
-        <u>Solicitant</u>
+        <u>Sol·licitant</u>
     </h3>
 
         <label>Nom: <b>{{Auth::user()->name}}</b></label>

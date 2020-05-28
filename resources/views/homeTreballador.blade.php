@@ -21,7 +21,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="{{ url('/ofertesSeguits') }}" class="btn  btn-dark"><i class="fa fa-heart" aria-hidden="true"></i> Ofertes de les empreses a les que segueixo
+                <a href="{{ url('/ofertesSeguits') }}" class="btn  btn-dark"><i class="fa fa-heart" aria-hidden="true"></i> Empreses que segueixo
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">

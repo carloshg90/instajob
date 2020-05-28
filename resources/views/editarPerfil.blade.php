@@ -57,7 +57,7 @@
                             <div class="col-md-6">
                             <select name="sector" id="sector" class="form-control" required>
                                 <option value="{{ Auth::user()->sector }}">{{ Auth::user()->sector }}</option>
-                                <option value="Hostelería">Hostelería</option>
+                                <option value="Hostaleria">Hostaleria</option>
                                 <option value="Mecànica">Mecànica</option>
                                 <option value="Construcció">Construcció</option>
                                 <option value="Banca">Banca</option>

@@ -15,7 +15,7 @@
                 <div class="card-header" style="text-align: center" ><h1>Informació del teu perfil</h1></div>
                 <div class="card-body">
                     <b>-Nom:</b> {{ Auth::user()->name }}<br>
-                    <b>-Direcció de correu:</b> {{ Auth::user()->email }}<br>
+                    <b>-Adreça de correu:</b> {{ Auth::user()->email }}<br>
                     <b>-Sector de treball:</b> {{ Auth::user()->sector }}<br>
                     <b>-Horari de treball:</b> {{ Auth::user()->horari }}<br>
                     <b>-Tipus d'usuari:</b> {{ Auth::user()->usuari }}<br>

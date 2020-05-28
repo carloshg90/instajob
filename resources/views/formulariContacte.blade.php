@@ -37,7 +37,7 @@
         <h3>
             Missatge per {{$receptor->name}}:
         </h3>
-      <label>Escrui aquí el teu missatge:</label>
+      <label>Escriu aquí el teu missatge:</label>
       <textarea name="message" class="form-control" placeholder="Escriu aquí el teu missatge"></textarea>
     </div>
      <div class="form-group divBotons">

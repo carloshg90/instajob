@@ -17,8 +17,8 @@ class EmailsSeeder extends Seeder
             'missatgeEnviat' => 'Estic interessat en la vostra oferta.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',
-            'sectorOferta' => 'Hostelería',
-            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostelería',
+            'sectorOferta' => 'Hostaleria',
+            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostaleria',
             'nomReceptor' => 'Empresa1',
           ]);
           DB::table('emails')->insert([
@@ -27,8 +27,8 @@ class EmailsSeeder extends Seeder
             'missatgeEnviat' => 'Crec que soc un bon aspirant a aquest lloc de treball.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',
-            'sectorOferta' => 'Hostelería',
-            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostelería',
+            'sectorOferta' => 'Hostaleria',
+            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostaleria',
             'nomReceptor' => 'Empresa1',
           ]);
           DB::table('emails')->insert([
@@ -37,8 +37,8 @@ class EmailsSeeder extends Seeder
             'missatgeEnviat' => 'Podeu contactar amb mi si em necessiteu.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',
-            'sectorOferta' => 'Hostelería',
-            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostelería',
+            'sectorOferta' => 'Hostaleria',
+            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostaleria',
             'nomReceptor' => 'Empresa4',
           ]);
           DB::table('emails')->insert([
@@ -47,8 +47,8 @@ class EmailsSeeder extends Seeder
             'missatgeEnviat' => 'Hola, gracies per la oportunitat.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',
-            'sectorOferta' => 'Hostelería',
-            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostelería',
+            'sectorOferta' => 'Hostaleria',
+            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostaleria',
             'nomReceptor' => 'Empresa1',
           ]);
           DB::table('emails')->insert([
@@ -57,8 +57,8 @@ class EmailsSeeder extends Seeder
             'missatgeEnviat' => 'Vull formar part de la vostra empresa.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',
-            'sectorOferta' => 'Hostelería',
-            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostelería',
+            'sectorOferta' => 'Hostaleria',
+            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostaleria',
             'nomReceptor' => 'Empresa1',
           ]);
           DB::table('emails')->insert([
@@ -67,8 +67,8 @@ class EmailsSeeder extends Seeder
             'missatgeEnviat' => 'Espero la vostra resposta.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',
-            'sectorOferta' => 'Hostelería',
-            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostelería',
+            'sectorOferta' => 'Hostaleria',
+            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostaleria',
             'nomReceptor' => 'Empresa3',
           ]);
           DB::table('emails')->insert([
@@ -77,8 +77,8 @@ class EmailsSeeder extends Seeder
             'missatgeEnviat' => 'Gracies per aquesta oportunitat.',
             'zonaOferta' => 'Girona',
             'horariOferta' => 'Matí',
-            'sectorOferta' => 'Hostelería',
-            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostelería',
+            'sectorOferta' => 'Hostaleria',
+            'cosOferta' => 'Oferta de empresa1 de Mati a Girona sector Hostaleria',
             'nomReceptor' => 'Empresa2',
           ]);
     }

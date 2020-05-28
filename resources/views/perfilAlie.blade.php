@@ -14,7 +14,7 @@
         <div style="text-align: center" class="card-header"><h1><b>Perfil de l'usuari {{ $perfil->name }}</b></h1></div>
             <div class="card-body">
                 <b>-Nom:</b> {{ $perfil->name }}<br>
-                <b>-Direcció de correu:</b> {{ $perfil->email }}<br>
+                <b>-Adreça de correu:</b> {{ $perfil->email }}<br>
                 <b>-Sector de treball:</b> {{ $perfil->sector }}<br>
                 <b>-Horari de treball:</b> {{ $perfil->horari }}<br>
                 <b>-Usuari registrat com:</b> {{ $perfil->usuari }}<br>

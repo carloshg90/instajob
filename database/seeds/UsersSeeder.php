@@ -21,7 +21,7 @@ class UsersSeeder extends Seeder
             'name' => 'Mercadona',
             'email' => 'mercadona@gmail.com',
             'password' => 'mercadona',
-            'sector' => 'Hostelería',
+            'sector' => 'Hostaleria',
             'horari' => 'Matí',
             'usuari' => 'Empresa',
             'zona' => 'Girona'
@@ -30,7 +30,7 @@ class UsersSeeder extends Seeder
             'name' => 'Carloshg90',
             'email' => 'carloshg90@hotmail.com',
             'password' => 'carloshg90',
-            'sector' => 'Hostelería',
+            'sector' => 'Hostaleria',
             'horari' => 'Matí',
             'usuari' => 'Empresa',
             'zona' => 'Girona'
@@ -57,7 +57,7 @@ class UsersSeeder extends Seeder
             'name' => 'Marechiaro',
             'email' => 'marechiaro@gmail.com',
             'password' => 'marechiaro',
-            'sector' => 'Hostelería',
+            'sector' => 'Hostaleria',
             'horari' => 'Tarda',
             'usuari' => 'Empresa',
             'zona' => 'Girona'
@@ -66,7 +66,7 @@ class UsersSeeder extends Seeder
             'name' => 'Whatsapp',
             'email' => 'whatsapp@gmail.com',
             'password' => 'whatsapp',
-            'sector' => 'Hostelería',
+            'sector' => 'Hostaleria',
             'horari' => 'Tarda',
             'usuari' => 'Empresa',
             'zona' => 'Girona'
@@ -93,7 +93,7 @@ class UsersSeeder extends Seeder
             'name' => 'litoshg90',
             'email' => 'litoshg90@gmail.com',
             'password' => 'litoshg90',
-            'sector' => 'Hostelería',
+            'sector' => 'Hostaleria',
             'horari' => 'Matí',
             'usuari' => 'Treballador',
             'zona' => 'Girona'
@@ -102,7 +102,7 @@ class UsersSeeder extends Seeder
             'name' => 'Decathlon',
             'email' => 'decathlon@gmail.com',
             'password' => 'decathlon',
-            'sector' => 'Hostelería',
+            'sector' => 'Hostaleria',
             'horari' => 'Tarda',
             'usuari' => 'Empresa',
             'zona' => 'Girona'
@@ -120,7 +120,7 @@ class UsersSeeder extends Seeder
             'name' => 'Instagram',
             'email' => 'instagram@gmail.com',
             'password' => 'instagram',
-            'sector' => 'Hostelería',
+            'sector' => 'Hostaleria',
             'horari' => 'Tarda',
             'usuari' => 'Empresa',
             'zona' => 'Girona'

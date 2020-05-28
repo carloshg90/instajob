@@ -83,7 +83,7 @@
                         </li>
                         <li class="nav-link navbarlinks">
                             <a href="{{ url('/ofertesSeguits') }}">
-                                <i class="fa fa-heart" aria-hidden="true"></i> Empreses a les que segueixo
+                                <i class="fa fa-heart" aria-hidden="true"></i> Empreses que segueixo
                             </a>
                         </li>
                         <li class="nav-link navbarlinks">
