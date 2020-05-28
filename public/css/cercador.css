@@ -21,6 +21,16 @@ a:hover {
     color: grey;
 }
 
+.btn {
+    margin: 0.3em;
+}
+
+.divBotons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .pieza {
     width: 1.5em;
     height: 1.5em;

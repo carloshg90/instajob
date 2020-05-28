@@ -133,6 +133,16 @@
                 var divBotons = document.createElement("div");
                 divBotons.setAttribute("class","divBotons");
                 li.appendChild(divBotons);
+                //SEGUIR
+                var btnSeguir = document.createElement("button");
+                var iSeguir = document.createElement("i");
+                iSeguir.setAttribute("class","fa fa-heart");
+                iSeguir.setAttribute("aria-hidden","true");
+                btnSeguir.setAttribute("class","btn btn-success "+empreses[i].id+" ");
+                btnSeguir.setAttribute("onclick","seguir("+empreses[i].id+")");
+                btnSeguir.innerHTML = "Seguir a aquesta empresa! ";
+                btnSeguir.appendChild(iSeguir);
+                divBotons.appendChild(btnSeguir);
                 //Boto per contactar amb el treballador
                 var btnContactar = document.createElement("a");
                 var iContactar = document.createElement("i");
@@ -145,6 +155,21 @@
                 divBotons.appendChild(btnContactar);
             }
         }
+    }
+
+
+    //Funcio per seguir a una empresa
+    function seguir($id){
+        $.ajax({
+          url: "/ofertesAjaxSeguir/"+$id,
+          type:"POST",
+          data:{
+            "_token": "{{ csrf_token() }}",
+          },
+          success:function(response){
+            $("."+$id).remove();
+          },
+         });
     }
 
     //FCridem a la funcio per obtenir totes les empreses

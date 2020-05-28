@@ -22,7 +22,7 @@
         Han deixat el següent missatge per tu:
     </h3>
     <h4>{{ $data['message'] }}</h4>
-    <p>Pots contestar mitjançant la seva direcció de correu: <b>{{ $data['emailContacte'] }}</b>, o entrant a Instajob.</p>
+    <p>Pots contestar a aquest usuari mitjançant la seva direcció de correu: <b>{{ $data['emailContacte'] }}</b>, o entrant a Instajob.</p>
     <hr>
     <h4>Aquest missatge ha sigut enviat des de una direcció de correu que no admet missatges, entra a la nostra web per més informació.</h4>
 </div>
